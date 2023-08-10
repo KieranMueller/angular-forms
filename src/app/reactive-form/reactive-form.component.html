@@ -1,0 +1,21 @@
+<h1>Reactive Form Example:</h1>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <p>
+    <label>First Name:</label>
+    <input type="text" formControlName="firstName" />
+  </p>
+  <p>
+    <label>Password:</label>
+    <input type="password" formControlName="password" />
+  </p>
+  <p>
+    <button type="submit" [disabled]="!form.valid">Submit</button>
+  </p>
+</form>
+<div>
+  <h2>Results</h2>
+  <p>First Name: {{ form.value.firstName }}</p>
+  <p>Password: {{ form.value.password }}</p>
+</div>
+<img src="../../assets/images/reactive-ts.png" alt="code" />
+<img src="../../assets/images/reactive-html.png" alt="code" />
