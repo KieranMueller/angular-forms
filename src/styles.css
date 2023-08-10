@@ -14,6 +14,12 @@ button {
   cursor: pointer;
 }
 
+button:disabled {
+  background-color: rgb(137, 137, 137);
+  color: black;
+  cursor: default;
+}
+
 input {
   outline: none;
   border: none;
