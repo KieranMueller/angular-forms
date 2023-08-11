@@ -1,0 +1,26 @@
+<div class="container">
+  <label for="name">Name</label>
+  <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+    <input
+      type="text"
+      id="name"
+      name="name"
+      required
+      minlength="4"
+      maxlength="10"
+      [(ngModel)]="hero.name"
+      #name="ngModel"
+    />
+    <button type="submit" [disabled]="myForm.invalid">Submit</button>
+  </form>
+  <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+    <p *ngIf="name.errors?.['required']">Name is required.</p>
+    <p *ngIf="name.errors?.['minlength']">
+      Name must be at least 4 characters long.
+    </p>
+  </div>
+  <div class="image-div">
+    <img src="../../../assets/images/template-validation-ts.png" alt="code" />
+    <img src="../../../assets/images/template-validation-html.png" alt="code" />
+  </div>
+</div>
