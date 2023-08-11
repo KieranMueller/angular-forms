@@ -1,0 +1,27 @@
+<div class="container">
+  <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+    <label for="phone">Phone</label>
+    <input
+      type="text"
+      name="phone"
+      [(ngModel)]="phone"
+      placeholder="(123) 456-7899"
+      [mask]="'(000) 000-0000'"
+      required
+    />
+    <p>actual: {{ phone }}</p>
+    <button [disabled]="myForm.invalid">Submit</button>
+  </form>
+  <h2>Steps</h2>
+  <ul>
+    <li>npm i ngx-mask@14.2.4 (any version less than 15)</li>
+    <li>(within app.module.ts) ↓</li>
+    <ul>
+      <li>import {{ "{" }} NgxMaskModule {{ "}" }} from 'ngx-mask'</li>
+      <li>add NgxMaskModule.forRoot() to imports array</li>
+    </ul>
+    <li>add [mask] to html tag and define your rule</li>
+  </ul>
+  <img src="../../assets/images/input-mask-ts.png" alt="code" />
+  <img src="../../assets/images/input-mask-html.png" alt="code" />
+</div>

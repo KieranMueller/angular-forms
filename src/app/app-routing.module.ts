@@ -6,6 +6,7 @@ import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.compo
 import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormValidationComponent } from './forms/reactive-form-validation/reactive-form-validation.component';
 import { TemplateDrivenFormValidationComponent } from './forms/template-driven-form-validation/template-driven-form-validation.component';
+import { InputMaskComponent } from './input-mask/input-mask.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -19,6 +20,10 @@ const routes: Routes = [
   {
     path: 'reactive-form-validation',
     component: ReactiveFormValidationComponent,
+  },
+  {
+    path: 'input-mask',
+    component: InputMaskComponent,
   },
 ];
 

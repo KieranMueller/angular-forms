@@ -33,3 +33,7 @@
   border-top: 1px solid whitesmoke;
   padding: 30px;
 }
+
+.inactive {
+  cursor: default;
+}

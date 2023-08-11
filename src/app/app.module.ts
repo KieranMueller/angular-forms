@@ -9,6 +9,8 @@ import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.compo
 import { FormsComponent } from './forms/forms.component';
 import { TemplateDrivenFormValidationComponent } from './forms/template-driven-form-validation/template-driven-form-validation.component';
 import { ReactiveFormValidationComponent } from './forms/reactive-form-validation/reactive-form-validation.component';
+import { InputMaskComponent } from './input-mask/input-mask.component';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
   declarations: [
@@ -19,8 +21,15 @@ import { ReactiveFormValidationComponent } from './forms/reactive-form-validatio
     ReactiveFormComponent,
     ReactiveFormValidationComponent,
     FormsComponent,
+    InputMaskComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot(),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
