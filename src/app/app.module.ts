@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { CompareComponent } from './compare/compare.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +14,7 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     TemplateDrivenFormComponent,
     HomeComponent,
     ReactiveFormComponent,
+    CompareComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [],
