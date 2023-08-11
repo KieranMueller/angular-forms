@@ -1,26 +1,37 @@
-<h2>Template Driven Form</h2>
-<form #myForm="ngForm" (ngSubmit)="onSubmitTemplateBased()">
-  <p>
-    <label>First Name:</label>
-    <input type="text" name="firstName" [(ngModel)]="user.firstName" required />
-  </p>
-  <p>
-    <label>Password:</label>
-    <input
-      type="password"
-      name="password"
-      [(ngModel)]="user.password"
-      required
-    />
-  </p>
-  <p>
-    <button type="submit" [disabled]="!myForm.valid">Submit</button>
-  </p>
-</form>
-<div>
-  <h2>Results</h2>
-  <p>First Name: {{ user.firstName }}</p>
-  <p>Password: {{ user.password }}</p>
+<div class="container">
+  <h2>Template Driven Form</h2>
+  <form #myForm="ngForm" (ngSubmit)="onSubmit()">
+    <p>
+      <label>First Name:</label>
+      <input
+        type="text"
+        name="firstName"
+        [(ngModel)]="user.firstName"
+        [placeholder]="placeholder.firstName"
+        required
+      />
+    </p>
+    <p>
+      <label>Password:</label>
+      <input
+        type="password"
+        name="password"
+        [(ngModel)]="user.password"
+        [placeholder]="placeholder.password"
+        required
+      />
+    </p>
+    <p>
+      <button type="submit" [disabled]="!myForm.valid">Submit</button>
+    </p>
+  </form>
+  <div>
+    <h2>Results</h2>
+    <p>First Name: {{ user.firstName }}</p>
+    <p>Password: {{ user.password }}</p>
+  </div>
+  <div class="image-div">
+    <img src="../../assets/images/template-ts1.png" alt="code" />
+    <img src="../../assets/images/template-html1.png" alt="code" />
+  </div>
 </div>
-<img src="../../assets/images/template-form-ts.png" alt="code" />
-<img src="../../assets/images/template-form.png" alt="code" />

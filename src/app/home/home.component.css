@@ -2,9 +2,34 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 97vh;
+  height: 90vh;
+  flex-direction: column;
 }
 
-button {
-  margin: 10px;
+.angular-logo {
+  width: 100px;
+}
+
+.sidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 97vh;
+  width: 200px;
+  border: 1px solid gray;
+  overflow-y: scroll;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidebar button {
+  width: 100%;
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0.356);
+  color: whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+  border-top: 1px solid whitesmoke;
+  padding: 30px;
 }

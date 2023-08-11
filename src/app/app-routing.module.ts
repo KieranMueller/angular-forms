@@ -3,13 +3,13 @@ import { RouterModule, Routes } from '@angular/router';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
-import { CompareComponent } from './compare/compare.component';
+import { FormsComponent } from './forms/forms.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'forms', component: FormsComponent },
   { path: 'template-driven-form', component: TemplateDrivenFormComponent },
   { path: 'reactive-form', component: ReactiveFormComponent },
-  { path: 'compare', component: CompareComponent },
 ];
 
 @NgModule({

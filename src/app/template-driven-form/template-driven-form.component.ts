@@ -11,7 +11,12 @@ export class TemplateDrivenFormComponent {
     password: '',
   };
 
-  onSubmitTemplateBased() {
+  placeholder = {
+    firstName: 'Kieran',
+    password: 'password',
+  };
+
+  onSubmit() {
     alert('do something');
   }
 }

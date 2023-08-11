@@ -12,6 +12,11 @@ export class ReactiveFormComponent {
     password: new FormControl('', Validators.required),
   });
 
+  placeholder = {
+    firstName: 'Kieran',
+    password: 'password',
+  };
+
   onSubmit() {
     alert('do something');
   }
