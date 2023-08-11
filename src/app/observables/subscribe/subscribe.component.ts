@@ -8,6 +8,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 })
 export class SubscribeComponent implements OnInit, OnDestroy {
   data: Object | string = '';
+  url = 'https://jsonplaceholder.typicode.com/todos/1';
 
   constructor(private http: HttpClient) {}
 
@@ -19,15 +20,22 @@ export class SubscribeComponent implements OnInit, OnDestroy {
     this.getData().unsubscribe();
   }
 
+  badRequest() {
+    return this.http.get('').subscribe({
+      error: (e) => {
+        this.data = 'something went wrong';
+        console.log(e);
+      },
+    });
+  }
+
   getData() {
-    return this.http
-      .get('https://jsonplaceholder.typicode.com/todos/1')
-      .subscribe({
-        next: (res) => (this.data = res),
-        error: (e) => {
-          (this.data = 'something went wrong: '), console.log(e);
-        },
-        complete: () => alert('all done!'),
-      });
+    return this.http.get(this.url).subscribe({
+      next: (res) => (this.data = res),
+      error: (e) => {
+        (this.data = 'something went wrong '), console.log(e);
+      },
+      complete: () => alert('all done!'),
+    });
   }
 }

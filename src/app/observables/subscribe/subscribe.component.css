@@ -4,6 +4,10 @@
   justify-content: space-around;
 }
 
+button {
+  margin: 10px;
+}
+
 .left {
   display: flex;
   flex-direction: column;
