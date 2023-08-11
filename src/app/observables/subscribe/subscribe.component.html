@@ -1,0 +1,45 @@
+<app-observables></app-observables>
+<div class="container">
+  <div class="left">
+    <div class="logic">
+      <button (click)="getData()">Send HTTP GET request</button>
+      <p>{{ data | json }}</p>
+    </div>
+    <h2>Steps</h2>
+    <ul>
+      <li>within app.module.ts</li>
+      <ul>
+        <li>
+          import {{ "{" }} HttpClientModule {{ "}" }} from
+          '@angular/common/http';
+        </li>
+        <li>add HttpClientModule to imports array</li>
+      </ul>
+      <li>within your-component.ts</li>
+      <ul>
+        <li>implement OnDestroy, and optionally OnInit interface</li>
+        <li>dependency inject the HttpClient through the constructor</li>
+        <li>subscribe to an observable returned by an http method</li>
+      </ul>
+      <li>within your method</li>
+      <ul>
+        <li>subscription takes up to 3 parameters: next, error, complete</li>
+        <li>next provides data, used to update variables etc.</li>
+        <li>error provides error object to log to console etc.</li>
+        <li>complete provides no data, fired upon completion.</li>
+        <li>
+          both error and complete can only be fired once, will never receive
+          both, either it completes, or it failed
+        </li>
+      </ul>
+      <li>within ngOnDestroy</li>
+      <ul>
+        <li>always unsubcribe from observables to avoid memory leaks</li>
+      </ul>
+    </ul>
+  </div>
+  <div class="image-div">
+    <img src="../../../assets/images/subscribe-html.png" alt="code" />
+    <img src="../../../assets/images/subscribe-ts.png" alt="code" />
+  </div>
+</div>

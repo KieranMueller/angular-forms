@@ -11,6 +11,9 @@ import { TemplateDrivenFormValidationComponent } from './forms/template-driven-f
 import { ReactiveFormValidationComponent } from './forms/reactive-form-validation/reactive-form-validation.component';
 import { InputMaskComponent } from './input-mask/input-mask.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { ObservablesComponent } from './observables/observables.component';
+import { SubscribeComponent } from './observables/subscribe/subscribe.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,8 @@ import { NgxMaskModule } from 'ngx-mask';
     ReactiveFormValidationComponent,
     FormsComponent,
     InputMaskComponent,
+    ObservablesComponent,
+    SubscribeComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +34,7 @@ import { NgxMaskModule } from 'ngx-mask';
     FormsModule,
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

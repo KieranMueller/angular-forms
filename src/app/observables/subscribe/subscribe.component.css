@@ -1,0 +1,27 @@
+.container {
+  margin-left: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.image-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.logic {
+  border: 1px solid gray;
+  padding: 50px;
+}
+
+img {
+  margin-bottom: 30px;
+  width: 40vw;
+  min-width: 400px;
+}
