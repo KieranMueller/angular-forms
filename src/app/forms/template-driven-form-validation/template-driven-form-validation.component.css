@@ -1,13 +1,5 @@
 .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 96vh;
-  flex-direction: column;
-}
-
-.image-div {
-  display: flex;
+  margin: 20px;
 }
 
 .image-div img {
