@@ -18,7 +18,7 @@ export class AxiosComponent {
   }
 
   getError() {
-    this.url = 'nothin';
+    this.url = 'https://jsonplaceholder.typicode.com/todos/hey';
     this.getStuff();
     this.url = 'https://jsonplaceholder.typicode.com/todos/1';
   }
