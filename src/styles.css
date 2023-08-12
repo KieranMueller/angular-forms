@@ -1,7 +1,16 @@
+@font-face {
+  font-family: nunito;
+  src: url(./assets/fonts/Nunito-Regular.ttf) format("truetype");
+}
+
 html {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: nunito;
   background-color: rgb(28, 28, 28);
   color: whitesmoke;
+}
+
+* {
+  font-family: nunito;
 }
 
 button {
