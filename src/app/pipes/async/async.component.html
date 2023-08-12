@@ -1,0 +1,31 @@
+<div class="container">
+  <app-pipes></app-pipes>
+  <div class="logic">
+    <button (click)="getData()">Send GET request</button>
+    <p>data: {{ data | async | json }}</p>
+    <p>moreData: {{ moreData | async | json }}</p>
+  </div>
+  <div class="image-div">
+    <p *ngIf="showHtml && showTs">click image for copyable code</p>
+    <div *ngIf="!showTs">
+      <button (click)="showTs = true">Revert</button>
+      <pre>{{ snippet }}</pre>
+    </div>
+    <img
+      *ngIf="showTs"
+      (click)="showTs = false"
+      src="../../../assets/images/async-ts.png"
+      alt="code"
+    />
+    <div *ngIf="!showHtml">
+      <button (click)="showHtml = true">Revert</button>
+      <pre>{{ snippet2 }}</pre>
+    </div>
+    <img
+      *ngIf="showHtml"
+      (click)="showHtml = false"
+      src="../../../assets/images/async-html.png"
+      alt="code"
+    />
+  </div>
+</div>

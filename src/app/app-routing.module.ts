@@ -9,6 +9,8 @@ import { TemplateDrivenFormValidationComponent } from './forms/template-driven-f
 import { InputMaskComponent } from './input-mask/input-mask.component';
 import { ObservablesComponent } from './observables/observables.component';
 import { SubscribeComponent } from './observables/subscribe/subscribe.component';
+import { PipesComponent } from './pipes/pipes.component';
+import { AsyncComponent } from './pipes/async/async.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -34,6 +36,14 @@ const routes: Routes = [
   {
     path: 'subscribe',
     component: SubscribeComponent,
+  },
+  {
+    path: 'pipes',
+    component: PipesComponent,
+  },
+  {
+    path: 'async-pipe',
+    component: AsyncComponent,
   },
 ];
 

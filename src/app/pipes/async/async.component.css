@@ -1,0 +1,15 @@
+.logic {
+  padding: 20px;
+  border: 1px solid gray;
+  width: 600px;
+  border-radius: 10px;
+}
+
+img {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.image-div {
+  margin-top: 20px;
+}

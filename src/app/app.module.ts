@@ -16,6 +16,8 @@ import { SubscribeComponent } from './observables/subscribe/subscribe.component'
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { SecurityContext } from '@angular/core';
 import { MarkdownModule } from 'ngx-markdown';
+import { PipesComponent } from './pipes/pipes.component';
+import { AsyncComponent } from './pipes/async/async.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { MarkdownModule } from 'ngx-markdown';
     InputMaskComponent,
     ObservablesComponent,
     SubscribeComponent,
+    PipesComponent,
+    AsyncComponent,
   ],
   imports: [
     BrowserModule,
