@@ -13,7 +13,9 @@ import { InputMaskComponent } from './input-mask/input-mask.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { ObservablesComponent } from './observables/observables.component';
 import { SubscribeComponent } from './observables/subscribe/subscribe.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { SecurityContext } from '@angular/core';
+import { MarkdownModule } from 'ngx-markdown';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,10 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
     HttpClientModule,
+    MarkdownModule.forRoot({
+      loader: HttpClient,
+      sanitize: SecurityContext.NONE,
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],

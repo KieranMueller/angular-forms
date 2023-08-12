@@ -40,7 +40,30 @@
     </ul>
   </div>
   <div class="image-div">
-    <img src="../../../assets/images/subscribe-html.png" alt="code" />
-    <img src="../../../assets/images/subscribe-ts.png" alt="code" />
+    <p *ngIf="showHtml && showTs">click image for copyable code</p>
+    <div *ngIf="!showHtml">
+      <button (click)="showHtml = !showHtml">Revert</button>
+      <p>html</p>
+      <pre>{{ snippet2 }}</pre>
+    </div>
+    <img
+      class="code"
+      *ngIf="showHtml"
+      (click)="showHtml = !showHtml"
+      src="../../../assets/images/subscribe-html.png"
+      alt="code"
+    />
+    <div *ngIf="!showTs">
+      <button (click)="showTs = !showTs">Revert</button>
+      <p>typescript</p>
+      <pre>{{ snippet }}</pre>
+    </div>
+    <img
+      class="code"
+      *ngIf="showTs"
+      (click)="showTs = !showTs"
+      src="../../../assets/images/subscribe-ts.png"
+      alt="code"
+    />
   </div>
 </div>
