@@ -19,6 +19,7 @@ import { MarkdownModule } from 'ngx-markdown';
 import { PipesComponent } from './pipes/pipes.component';
 import { AsyncComponent } from './pipes/async/async.component';
 import { DatePipeComponent } from './pipes/date-pipe/date-pipe.component';
+import { AxiosComponent } from './axios/axios.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { DatePipeComponent } from './pipes/date-pipe/date-pipe.component';
     PipesComponent,
     AsyncComponent,
     DatePipeComponent,
+    AxiosComponent,
   ],
   imports: [
     BrowserModule,

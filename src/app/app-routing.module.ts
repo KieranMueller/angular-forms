@@ -12,6 +12,7 @@ import { SubscribeComponent } from './observables/subscribe/subscribe.component'
 import { PipesComponent } from './pipes/pipes.component';
 import { AsyncComponent } from './pipes/async/async.component';
 import { DatePipeComponent } from './pipes/date-pipe/date-pipe.component';
+import { AxiosComponent } from './axios/axios.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -49,6 +50,10 @@ const routes: Routes = [
   {
     path: 'date-pipe',
     component: DatePipeComponent,
+  },
+  {
+    path: 'axios',
+    component: AxiosComponent,
   },
 ];
 
