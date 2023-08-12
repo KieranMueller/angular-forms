@@ -11,6 +11,7 @@ import { ObservablesComponent } from './observables/observables.component';
 import { SubscribeComponent } from './observables/subscribe/subscribe.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { AsyncComponent } from './pipes/async/async.component';
+import { DatePipeComponent } from './pipes/date-pipe/date-pipe.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -44,6 +45,10 @@ const routes: Routes = [
   {
     path: 'async-pipe',
     component: AsyncComponent,
+  },
+  {
+    path: 'date-pipe',
+    component: DatePipeComponent,
   },
 ];
 

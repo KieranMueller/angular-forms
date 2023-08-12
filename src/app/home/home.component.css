@@ -27,11 +27,16 @@
 .sidebar button {
   width: 100%;
   border-radius: 0;
-  background-color: rgba(213, 57, 57, 0.607);
+  background-color: rgba(213, 57, 57, 0.725);
   color: whitesmoke;
   border-bottom: 1px solid whitesmoke;
   border-top: 1px solid whitesmoke;
   padding: 30px;
+  transition: 0.3s;
+}
+
+.sidebar button:hover {
+  background: rgba(255, 0, 0, 0.496);
 }
 
 .inactive {

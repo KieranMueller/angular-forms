@@ -1,0 +1,39 @@
+<app-pipes></app-pipes>
+<div class="container">
+  <p>{{ today | date : "short" }}</p>
+  <p>{{ today | date : "medium" }}</p>
+  <p>{{ today | date : "long" }}</p>
+  <p>{{ today | date : "full" }}</p>
+  <p>{{ today | date : "shortDate" }}</p>
+  <p>{{ today | date : "mediumDate" }}</p>
+  <p>{{ today | date : "longDate" }}</p>
+  <p>{{ today | date : "fullDate" }}</p>
+  <p>{{ today | date : "shortTime" }}</p>
+  <p>{{ today | date : "mediumTime" }}</p>
+  <p>{{ today | date : "longTime" }}</p>
+  <p>{{ today | date : "fullTime" }}</p>
+  <hr />
+  <div class="image-div">
+    <p *ngIf="showHtml && showTs">click image for copyable code</p>
+    <div *ngIf="!showTs">
+      <button (click)="showTs = true">Revert</button>
+      <pre>{{ snippet }}</pre>
+    </div>
+    <img
+      *ngIf="showTs"
+      (click)="showTs = false"
+      src="../../../assets/images/date-pipe-ts.png"
+      alt="code"
+    />
+    <div *ngIf="!showHtml">
+      <button (click)="showHtml = true">Revert</button>
+      <pre>{{ snippet2 }}</pre>
+    </div>
+    <img
+      *ngIf="showHtml"
+      (click)="showHtml = false"
+      src="../../../assets/images/date-pipe-html.png"
+      alt="code"
+    />
+  </div>
+</div>

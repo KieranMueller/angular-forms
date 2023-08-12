@@ -33,6 +33,7 @@ export class AsyncComponent {
     getData() {
       this.moreData = this.http.get(this.url);
     }
+  }
   `;
   snippet2 = `
   <button (click)="getData()">Send GET request</button>

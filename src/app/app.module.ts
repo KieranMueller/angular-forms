@@ -18,6 +18,7 @@ import { SecurityContext } from '@angular/core';
 import { MarkdownModule } from 'ngx-markdown';
 import { PipesComponent } from './pipes/pipes.component';
 import { AsyncComponent } from './pipes/async/async.component';
+import { DatePipeComponent } from './pipes/date-pipe/date-pipe.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { AsyncComponent } from './pipes/async/async.component';
     SubscribeComponent,
     PipesComponent,
     AsyncComponent,
+    DatePipeComponent,
   ],
   imports: [
     BrowserModule,
