@@ -23,6 +23,10 @@ import { AxiosComponent } from './axios/axios.component';
 import { NgifelseComponent } from './ngifnav/ngifelse/ngifelse.component';
 import { NgifnavComponent } from './ngifnav/ngifnav.component';
 import { NgforComponent } from './ngifnav/ngfor/ngfor.component';
+import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.component';
+import { Component1Component } from './behavior-subject/component1/component1.component';
+import { Component2Component } from './behavior-subject/component2/component2.component';
+import { Component3Component } from './behavior-subject/component3/component3.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +47,10 @@ import { NgforComponent } from './ngifnav/ngfor/ngfor.component';
     NgifelseComponent,
     NgifnavComponent,
     NgforComponent,
+    BehaviorSubjectComponent,
+    Component1Component,
+    Component2Component,
+    Component3Component,
   ],
   imports: [
     BrowserModule,

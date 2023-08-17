@@ -16,6 +16,7 @@ import { AxiosComponent } from './axios/axios.component';
 import { NgifelseComponent } from './ngifnav/ngifelse/ngifelse.component';
 import { NgifnavComponent } from './ngifnav/ngifnav.component';
 import { NgforComponent } from './ngifnav/ngfor/ngfor.component';
+import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -69,6 +70,10 @@ const routes: Routes = [
   {
     path: 'ng-for',
     component: NgforComponent,
+  },
+  {
+    path: 'behavior-subject',
+    component: BehaviorSubjectComponent,
   },
 ];
 

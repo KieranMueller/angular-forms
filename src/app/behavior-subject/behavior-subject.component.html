@@ -1,0 +1,61 @@
+<button routerLink="">Back to home</button>
+<div>
+  <app-component1></app-component1>
+  <app-component2></app-component2>
+  <app-component3></app-component3>
+  <h2>Sharing data between unrelated components</h2>
+  <ul>
+    <li>
+      here we are using a shared service called 'BehaviorService'
+      <ul>
+        <li>we create a behavior subject</li>
+        <li>we create an observable from the behavior subject</li>
+        <li>
+          within our three identical components we
+          <ul>
+            <li>inject the service</li>
+            <li>
+              on init, we subscribe to this observable, setting <br />
+              our local message variable to the current value
+            </li>
+            <li>
+              we create a method named updateMessage that <br />
+              calls the updateMessage method in the service
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+  <p *ngIf="showTs && showService && showHtml">click image for copyable code</p>
+  <div *ngIf="!showTs">
+    <button (click)="showTs = true">revert</button>
+    <pre>{{ ts }}</pre>
+  </div>
+  <img
+    *ngIf="showTs"
+    (click)="showTs = false"
+    src="../../assets/images/behavior-ts.png"
+    alt="code"
+  />
+  <div *ngIf="!showService">
+    <button (click)="showService = true">revert</button>
+    <pre>{{ service }}</pre>
+  </div>
+  <img
+    *ngIf="showService"
+    (click)="showService = false"
+    src="../../assets/images/behavior-service.png"
+    alt="code"
+  />
+  <div *ngIf="!showHtml">
+    <button (click)="showHtml = true">revert</button>
+    <pre>{{ html }}</pre>
+  </div>
+  <img
+    *ngIf="showHtml"
+    (click)="showHtml = false"
+    src="../../assets/images/behavior-html.png"
+    alt="code"
+  />
+</div>
