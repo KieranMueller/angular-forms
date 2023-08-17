@@ -20,6 +20,7 @@ import { PipesComponent } from './pipes/pipes.component';
 import { AsyncComponent } from './pipes/async/async.component';
 import { DatePipeComponent } from './pipes/date-pipe/date-pipe.component';
 import { AxiosComponent } from './axios/axios.component';
+import { NgifelseComponent } from './ngifelse/ngifelse.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { AxiosComponent } from './axios/axios.component';
     AsyncComponent,
     DatePipeComponent,
     AxiosComponent,
+    NgifelseComponent,
   ],
   imports: [
     BrowserModule,
