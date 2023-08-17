@@ -27,6 +27,7 @@ import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.co
 import { Component1Component } from './behavior-subject/component1/component1.component';
 import { Component2Component } from './behavior-subject/component2/component2.component';
 import { Component3Component } from './behavior-subject/component3/component3.component';
+import { NgswitchComponent } from './ngifnav/ngswitch/ngswitch.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +52,7 @@ import { Component3Component } from './behavior-subject/component3/component3.co
     Component1Component,
     Component2Component,
     Component3Component,
+    NgswitchComponent,
   ],
   imports: [
     BrowserModule,
