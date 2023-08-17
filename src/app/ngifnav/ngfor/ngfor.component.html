@@ -1,0 +1,57 @@
+<app-ngifnav></app-ngifnav>
+<p>(click item to remove)</p>
+<div class="inner">
+  <ul *ngFor="let animal of animals" (click)="delete(animal)">
+    <h3>{{ animal.type }}</h3>
+    <li>{{ animal.name }}</li>
+    <li>{{ animal.color }}</li>
+    <br />
+  </ul>
+</div>
+<form #myForm="ngForm" (ngSubmit)="add()">
+  <input
+    type="text"
+    placeholder="type"
+    name="type"
+    [(ngModel)]="newAnimal.type"
+    required
+  />
+  <input
+    type="text"
+    placeholder="name"
+    name="name"
+    [(ngModel)]="newAnimal.name"
+    required
+  />
+  <input
+    type="text"
+    placeholder="color"
+    name="color"
+    [(ngModel)]="newAnimal.color"
+    required
+  />
+  <button [disabled]="myForm.invalid">Add Animal</button>
+</form>
+<div class="img-div">
+  <p *ngIf="showHtml && showTs">click image for copyable code</p>
+  <div *ngIf="!showTs">
+    <button (click)="showTs = true">revert</button>
+    <pre>{{ snippet }}</pre>
+  </div>
+  <img
+    (click)="showTs = false"
+    *ngIf="showTs"
+    src="../../assets/images/ngfor-ts.png"
+    alt="code"
+  />
+  <div *ngIf="!showHtml">
+    <button (click)="showHtml = true">revert</button>
+    <pre>{{ snippet1 }}</pre>
+  </div>
+  <img
+    (click)="showHtml = false"
+    *ngIf="showHtml"
+    src="../../../assets/images/ngfor-html.png"
+    alt="code"
+  />
+</div>

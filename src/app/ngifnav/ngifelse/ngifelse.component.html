@@ -1,8 +1,11 @@
-<div *ngIf="selected; else notSelected">Show me if 'selected = true'</div>
-<ng-template #notSelected>
-  <div>Show me if 'selected = false'</div>
-</ng-template>
-<button (click)="selected = !selected">selected = {{ selected }}</button>
+<app-ngifnav></app-ngifnav>
+<div class="logic">
+  <div *ngIf="selected; else notSelected">Show me if 'selected = true'</div>
+  <ng-template #notSelected>
+    <div>Show me if 'selected = false'</div>
+  </ng-template>
+  <button (click)="selected = !selected">selected = {{ selected }}</button>
+</div>
 <div class="img-div">
   <p *ngIf="showHtml && showTs">click image for copyable code</p>
   <div *ngIf="!showTs">

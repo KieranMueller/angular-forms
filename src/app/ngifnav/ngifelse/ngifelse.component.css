@@ -1,0 +1,16 @@
+img {
+  margin: 10px;
+  cursor: pointer;
+}
+
+.img-div {
+  margin: 10px;
+}
+
+.logic {
+  padding: 50px;
+  border: 1px solid gray;
+  width: fit-content;
+  border-radius: 10px;
+  margin: 10px;
+}
