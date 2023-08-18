@@ -31,6 +31,9 @@ import { NgswitchComponent } from './ngifnav/ngswitch/ngswitch.component';
 import { InputComponent } from './input/input.component';
 import { ChildComponent } from './input/child/child.component';
 import { ParentComponent } from './input/parent/parent.component';
+import { OutputComponent } from './output/output.component';
+import { OutputParentComponent } from './output/output-parent/output-parent.component';
+import { OutputChildComponent } from './output/output-child/output-child.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +62,9 @@ import { ParentComponent } from './input/parent/parent.component';
     InputComponent,
     ChildComponent,
     ParentComponent,
+    OutputComponent,
+    OutputParentComponent,
+    OutputChildComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,30 @@
 <app-parent></app-parent>
+<h3>in this example</h3>
+<ul>
+  <li>
+    the parent declares a variable 'count' (but does not display its value in
+    the template)
+  </li>
+  <li>
+    the parent template holds a button. When clicked, the value of 'count' is
+    incremented
+  </li>
+  <li>
+    the child component's selector is included in the parent's template, <br />
+    making it a child of the parent component
+  </li>
+  <li>
+    within the child selector, we use property binding to bind the 'count'
+    variable <br />
+    from the parent, to the 'count' variable in the child component
+  </li>
+  <li>
+    within the child component typescript, we create a variable 'count' prefixed
+    <br />
+    with Input(), denoting that this value will be passed to us from the parent
+  </li>
+  <li>we display the value of 'count' in the child's template</li>
+</ul>
 <p *ngIf="showParentHtml && showParentTs && showChildHtml && showChildTs">
   click image for copyable code
 </p>

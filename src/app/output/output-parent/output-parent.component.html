@@ -1,0 +1,5 @@
+<div class="container">
+  <h3>parent</h3>
+  <p>{{ messageFromChild }}</p>
+</div>
+<app-output-child (emitter)="receiveEvent($event)"></app-output-child>

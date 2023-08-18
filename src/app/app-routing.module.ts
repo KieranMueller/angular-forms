@@ -19,6 +19,7 @@ import { NgforComponent } from './ngifnav/ngfor/ngfor.component';
 import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.component';
 import { NgswitchComponent } from './ngifnav/ngswitch/ngswitch.component';
 import { InputComponent } from './input/input.component';
+import { OutputComponent } from './output/output.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -84,6 +85,10 @@ const routes: Routes = [
   {
     path: 'input',
     component: InputComponent,
+  },
+  {
+    path: 'output',
+    component: OutputComponent,
   },
 ];
 
