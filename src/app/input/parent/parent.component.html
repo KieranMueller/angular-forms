@@ -1,0 +1,8 @@
+<button routerLink="">back to home</button>
+<div class="container">
+  <div class="parent">
+    <h3>parent</h3>
+    <p>increment count <button (click)="count = count + 1">+</button></p>
+  </div>
+  <app-child [count]="count"></app-child>
+</div>

@@ -1,0 +1,44 @@
+<app-parent></app-parent>
+<p *ngIf="showParentHtml && showParentTs && showChildHtml && showChildTs">
+  click image for copyable code
+</p>
+<div *ngIf="!showParentTs">
+  <button (click)="showParentTs = true">revert</button>
+  <pre>{{ parentTs }}</pre>
+</div>
+<img
+  *ngIf="showParentTs"
+  (click)="showParentTs = false"
+  src="../../assets/images/parent-ts.png"
+  alt="code"
+/>
+<div *ngIf="!showParentHtml">
+  <button (click)="showParentHtml = true">revert</button>
+  <pre>{{ parentHtml }}</pre>
+</div>
+<img
+  *ngIf="showParentHtml"
+  (click)="showParentHtml = false"
+  src="../../assets/images/parent-html.png"
+  alt="code"
+/>
+<div *ngIf="!showChildTs">
+  <button (click)="showChildTs = true">revert</button>
+  <pre>{{ childTs }}</pre>
+</div>
+<img
+  *ngIf="showChildTs"
+  (click)="showChildTs = false"
+  src="../../assets/images/child-ts.png"
+  alt="code"
+/>
+<div *ngIf="!showChildHtml">
+  <button (click)="showChildHtml = true">revert</button>
+  <pre>{{ childHtml }}</pre>
+</div>
+<img
+  *ngIf="showChildHtml"
+  (click)="showChildHtml = false"
+  src="../../assets/images/child-html.png"
+  alt="code"
+/>
