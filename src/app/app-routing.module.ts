@@ -23,7 +23,6 @@ import { OutputComponent } from './output/output.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'forms', component: FormsComponent },
   { path: 'template-driven-form', component: TemplateDrivenFormComponent },
   {
     path: 'template-driven-form-validation',
@@ -39,16 +38,8 @@ const routes: Routes = [
     component: InputMaskComponent,
   },
   {
-    path: 'observables',
-    component: ObservablesComponent,
-  },
-  {
     path: 'subscribe',
     component: SubscribeComponent,
-  },
-  {
-    path: 'pipes',
-    component: PipesComponent,
   },
   {
     path: 'async-pipe',
@@ -61,10 +52,6 @@ const routes: Routes = [
   {
     path: 'axios',
     component: AxiosComponent,
-  },
-  {
-    path: 'ng',
-    component: NgifnavComponent,
   },
   {
     path: 'ng-if-else',
