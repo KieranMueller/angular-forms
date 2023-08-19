@@ -32,7 +32,26 @@
     <p>Password: {{ user.password }}</p>
   </div>
   <div class="image-div">
-    <img src="../../assets/images/template-ts1.png" alt="code" />
-    <img src="../../assets/images/template-html1.png" alt="code" />
+    <p *ngIf="showTs && showHtml">click image for copyable code</p>
+    <div *ngIf="!showTs">
+      <button (click)="showTs = true">revert</button>
+      <pre>{{ ts }}</pre>
+    </div>
+    <img
+      *ngIf="showTs"
+      (click)="showTs = false"
+      src="../../assets/images/template-ts1.png"
+      alt="code"
+    />
+    <div *ngIf="!showHtml">
+      <button (click)="showHtml = true">revert</button>
+      <pre>{{ html }}</pre>
+    </div>
+    <img
+      *ngIf="showHtml"
+      (click)="showHtml = false"
+      src="../../assets/images/template-html1.png"
+      alt="code"
+    />
   </div>
 </div>
