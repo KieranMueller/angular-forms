@@ -1,0 +1,21 @@
+div {
+  padding: 30px;
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: max-content;
+  margin: 20px;
+}
+
+button {
+  margin: 20px;
+}
+
+.text {
+  margin: 20px;
+  width: 300px;
+}
+
+img {
+  margin: 20px;
+  cursor: pointer;
+}

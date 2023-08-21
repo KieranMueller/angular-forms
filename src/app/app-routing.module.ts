@@ -20,6 +20,9 @@ import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.co
 import { NgswitchComponent } from './ngifnav/ngswitch/ngswitch.component';
 import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
+import { MaterialsComponent } from './materials/materials.component';
+import { ViewParentComponent } from './view-child-nav/view-parent/view-parent.component';
+import { MoreViewParentComponent } from './view-child-nav/more-view-parent/more-view-parent.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -76,6 +79,18 @@ const routes: Routes = [
   {
     path: 'output',
     component: OutputComponent,
+  },
+  {
+    path: 'material',
+    component: MaterialsComponent,
+  },
+  {
+    path: 'view-child',
+    component: ViewParentComponent,
+  },
+  {
+    path: 'more-view-child',
+    component: MoreViewParentComponent,
   },
 ];
 

@@ -34,6 +34,14 @@ import { ParentComponent } from './input/parent/parent.component';
 import { OutputComponent } from './output/output.component';
 import { OutputParentComponent } from './output/output-parent/output-parent.component';
 import { OutputChildComponent } from './output/output-child/output-child.component';
+import { MaterialsComponent } from './materials/materials.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { ViewChildComponent } from './view-child-nav/view-child/view-child.component';
+import { ViewChildNavComponent } from './view-child-nav/view-child-nav.component';
+import { ViewParentComponent } from './view-child-nav/view-parent/view-parent.component';
+import { MoreViewParentComponent } from './view-child-nav/more-view-parent/more-view-parent.component';
 
 @NgModule({
   declarations: [
@@ -65,9 +73,16 @@ import { OutputChildComponent } from './output/output-child/output-child.compone
     OutputComponent,
     OutputParentComponent,
     OutputChildComponent,
+    MaterialsComponent,
+    ViewChildComponent,
+    ViewParentComponent,
+    ViewChildNavComponent,
+    MoreViewParentComponent,
   ],
   imports: [
     BrowserModule,
+    MatSlideToggleModule,
+    MatAutocompleteModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
@@ -77,6 +92,7 @@ import { OutputChildComponent } from './output/output-child/output-child.compone
       loader: HttpClient,
       sanitize: SecurityContext.NONE,
     }),
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
