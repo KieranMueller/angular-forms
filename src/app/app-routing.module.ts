@@ -23,6 +23,7 @@ import { OutputComponent } from './output/output.component';
 import { MaterialsComponent } from './materials/materials.component';
 import { ViewParentComponent } from './view-child-nav/view-parent/view-parent.component';
 import { MoreViewParentComponent } from './view-child-nav/more-view-parent/more-view-parent.component';
+import { MorengforComponent } from './ngifnav/ngfor/morengfor/morengfor.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -63,6 +64,10 @@ const routes: Routes = [
   {
     path: 'ng-for',
     component: NgforComponent,
+  },
+  {
+    path: 'ng-for1',
+    component: MorengforComponent,
   },
   {
     path: 'ng-switch',

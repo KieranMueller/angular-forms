@@ -42,6 +42,7 @@ import { ViewChildComponent } from './view-child-nav/view-child/view-child.compo
 import { ViewChildNavComponent } from './view-child-nav/view-child-nav.component';
 import { ViewParentComponent } from './view-child-nav/view-parent/view-parent.component';
 import { MoreViewParentComponent } from './view-child-nav/more-view-parent/more-view-parent.component';
+import { MorengforComponent } from './ngifnav/ngfor/morengfor/morengfor.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { MoreViewParentComponent } from './view-child-nav/more-view-parent/more-
     ViewParentComponent,
     ViewChildNavComponent,
     MoreViewParentComponent,
+    MorengforComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,53 @@
+<app-ngifnav></app-ngifnav>
+<div class="container">
+  <div class="table">
+    <ul
+      class="list"
+      *ngFor="let animal of animals; let i = index; trackBy: getId"
+    >
+      <h3>{{ i + 1 }}</h3>
+      <h4>{{ animal.name }}</h4>
+      <h4>{{ animal.color }}</h4>
+    </ul>
+    <button (click)="refresh()">refresh</button>
+  </div>
+  <h3>Here we demonstrate 'trackBy' and 'let i = index' in ngFor</h3>
+  <ul>
+    <li>
+      trackBy listens to a function defined in the ts file, that ensures only
+      elements <br />
+      that are changed are re-rendered, preventing all elements from being
+      re-rendered, enhancing speed
+    </li>
+    <li>
+      let i = index allows you to keep track of the index for each item within
+      the ngfor loop
+    </li>
+    <li>
+      a common scenario for using trackBy would be dealing with observables
+      <br />
+      and lots of data, it is inefficient to re-render unchanged data
+    </li>
+  </ul>
+  <p>click image for copyable code</p>
+  <div *ngIf="!showTs">
+    <button (click)="showTs = true">revert</button>
+    <pre>{{ ts }}</pre>
+  </div>
+  <img
+    *ngIf="showTs"
+    (click)="showTs = false"
+    src="../../../../assets/images/trackby-ts.png"
+    alt="code"
+  />
+  <div *ngIf="!showHtml">
+    <button (click)="showHtml = true">revert</button>
+    <pre>{{ html }}</pre>
+  </div>
+  <img
+    *ngIf="showHtml"
+    (click)="showHtml = false"
+    src="../../../../assets/images/trackby-html.png"
+    alt="code"
+  />
+</div>
