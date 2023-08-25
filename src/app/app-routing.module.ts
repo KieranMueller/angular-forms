@@ -22,6 +22,7 @@ import { MorengforComponent } from './ngifnav/ngfor/morengfor/morengfor.componen
 import { MaterialsnavComponent } from './materialsnav/materialsnav.component';
 import { MaterialsComponent } from './materialsnav/materials/materials.component';
 import { SpinnerComponent } from './materialsnav/spinner/spinner.component';
+import { ForkjoinComponent } from './observables/forkjoin/forkjoin.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -98,6 +99,10 @@ const routes: Routes = [
   {
     path: 'spinner',
     component: SpinnerComponent,
+  },
+  {
+    path: 'fork-join',
+    component: ForkjoinComponent,
   },
 ];
 

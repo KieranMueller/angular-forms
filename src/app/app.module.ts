@@ -46,6 +46,7 @@ import { MaterialsnavComponent } from './materialsnav/materialsnav.component';
 import { MaterialsComponent } from './materialsnav/materials/materials.component';
 import { SpinnerComponent } from './materialsnav/spinner/spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ForkjoinComponent } from './observables/forkjoin/forkjoin.component';
 
 @NgModule({
   declarations: [
@@ -85,6 +86,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MaterialsnavComponent,
     MaterialsComponent,
     SpinnerComponent,
+    ForkjoinComponent,
   ],
   imports: [
     BrowserModule,

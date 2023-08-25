@@ -23,3 +23,7 @@ button:hover {
 .active {
   background-color: rgb(228, 55, 55);
 }
+
+.disabled:hover {
+  background-color: rgb(81, 77, 77);
+}

@@ -1,0 +1,10 @@
+<app-observables></app-observables>
+<div class="box">
+  <mat-spinner *ngIf="oneLoading" diameter="20"></mat-spinner>
+  <h3 *ngIf="!oneLoading">{{ one }}</h3>
+</div>
+<div class="box">
+  <mat-spinner *ngIf="twoLoading" diameter="20"></mat-spinner>
+  <h3 *ngIf="!twoLoading">{{ two }}</h3>
+</div>
+<button (click)="getData()">update</button>
