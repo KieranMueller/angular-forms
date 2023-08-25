@@ -3,27 +3,25 @@ import { RouterModule, Routes } from '@angular/router';
 import { TemplateDrivenFormComponent } from './forms/template-driven-form/template-driven-form.component';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormComponent } from './forms/reactive-form/reactive-form.component';
-import { FormsComponent } from './forms/forms.component';
 import { ReactiveFormValidationComponent } from './forms/reactive-form-validation/reactive-form-validation.component';
 import { TemplateDrivenFormValidationComponent } from './forms/template-driven-form-validation/template-driven-form-validation.component';
 import { InputMaskComponent } from './input-mask/input-mask.component';
-import { ObservablesComponent } from './observables/observables.component';
 import { SubscribeComponent } from './observables/subscribe/subscribe.component';
-import { PipesComponent } from './pipes/pipes.component';
 import { AsyncComponent } from './pipes/async/async.component';
 import { DatePipeComponent } from './pipes/date-pipe/date-pipe.component';
 import { AxiosComponent } from './axios/axios.component';
 import { NgifelseComponent } from './ngifnav/ngifelse/ngifelse.component';
-import { NgifnavComponent } from './ngifnav/ngifnav.component';
 import { NgforComponent } from './ngifnav/ngfor/ngfor.component';
 import { BehaviorSubjectComponent } from './behavior-subject/behavior-subject.component';
 import { NgswitchComponent } from './ngifnav/ngswitch/ngswitch.component';
 import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
-import { MaterialsComponent } from './materials/materials.component';
 import { ViewParentComponent } from './view-child-nav/view-parent/view-parent.component';
 import { MoreViewParentComponent } from './view-child-nav/more-view-parent/more-view-parent.component';
 import { MorengforComponent } from './ngifnav/ngfor/morengfor/morengfor.component';
+import { MaterialsnavComponent } from './materialsnav/materialsnav.component';
+import { MaterialsComponent } from './materialsnav/materials/materials.component';
+import { SpinnerComponent } from './materialsnav/spinner/spinner.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -86,16 +84,20 @@ const routes: Routes = [
     component: OutputComponent,
   },
   {
-    path: 'material',
-    component: MaterialsComponent,
-  },
-  {
     path: 'view-child',
     component: ViewParentComponent,
   },
   {
     path: 'more-view-child',
     component: MoreViewParentComponent,
+  },
+  {
+    path: 'autocomplete',
+    component: MaterialsComponent,
+  },
+  {
+    path: 'spinner',
+    component: SpinnerComponent,
   },
 ];
 

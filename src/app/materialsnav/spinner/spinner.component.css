@@ -1,0 +1,23 @@
+.container {
+  margin-left: 30px;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  width: 150px;
+  height: 200px;
+  border-radius: 20px;
+  border: 1px solid gray;
+}
+
+.box * {
+  margin: 10px;
+}
+
+img {
+  margin: 20px;
+}

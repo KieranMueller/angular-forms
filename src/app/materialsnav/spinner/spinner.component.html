@@ -1,0 +1,17 @@
+<app-materialsnav></app-materialsnav>
+<div class="container">
+  <div class="box">
+    <h3 *ngIf="!isLoading">{{ data }}</h3>
+    <mat-progress-spinner
+      [diameter]="40"
+      *ngIf="isLoading"
+      color="warn"
+      mode="indeterminate"
+      strokeWidth="3"
+    ></mat-progress-spinner>
+    <button (click)="getData()" [disabled]="isLoading">Get Data</button>
+    <button (click)="data = 0" [disabled]="data === 0">Reset</button>
+  </div>
+  <img src="../../../assets/images/spinner-ts.png" alt="code" />
+  <img src="../../../assets/images/spinner-html.png" alt="code" />
+</div>
