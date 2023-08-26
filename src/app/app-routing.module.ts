@@ -19,10 +19,13 @@ import { OutputComponent } from './output/output.component';
 import { ViewParentComponent } from './view-child-nav/view-parent/view-parent.component';
 import { MoreViewParentComponent } from './view-child-nav/more-view-parent/more-view-parent.component';
 import { MorengforComponent } from './ngifnav/ngfor/morengfor/morengfor.component';
-import { MaterialsnavComponent } from './materialsnav/materialsnav.component';
 import { MaterialsComponent } from './materialsnav/materials/materials.component';
 import { SpinnerComponent } from './materialsnav/spinner/spinner.component';
 import { ForkjoinComponent } from './observables/forkjoin/forkjoin.component';
+import { ObservableComponent } from './observables/observable/observable.component';
+import { AuthguardComponent } from './authguardnav/authguard/authguard.component';
+import { SecretComponent } from './authguardnav/secret/secret.component';
+import { authGuard } from './authguardnav/auth.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -43,6 +46,10 @@ const routes: Routes = [
   {
     path: 'subscribe',
     component: SubscribeComponent,
+  },
+  {
+    path: 'observable',
+    component: ObservableComponent,
   },
   {
     path: 'async-pipe',
@@ -103,6 +110,15 @@ const routes: Routes = [
   {
     path: 'fork-join',
     component: ForkjoinComponent,
+  },
+  {
+    path: 'authguard',
+    component: AuthguardComponent,
+  },
+  {
+    path: 'secret',
+    component: SecretComponent,
+    canActivate: [authGuard],
   },
 ];
 

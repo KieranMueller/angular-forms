@@ -1,0 +1,29 @@
+<app-authguardnav></app-authguardnav>
+<div class="container">
+  <h3>Credentials</h3>
+  <p>username: letmein</p>
+  <p>password: jasper</p>
+  <input [disabled]="isLoggedIn" type="text" [(ngModel)]="username" />
+  <input [disabled]="isLoggedIn" type="password" [(ngModel)]="password" />
+  <button
+    [disabled]="username === '' || password === ''"
+    (click)="login()"
+    routerLink="/secret"
+  >
+    view secret endpoint
+  </button>
+  <p *ngIf="error && username === '' && password === ''">invalid credentials</p>
+  <p *ngIf="isLoggedIn">you are currently logged in</p>
+</div>
+<div class="box">
+  <p>component.ts</p>
+  <img src="../../../assets/images/authguard-ts.png" alt="code" />
+  <p>component.html</p>
+  <img src="../../../assets/images/authguard-html.png" alt="code" />
+  <p>auth.service.ts</p>
+  <img src="../../../assets/images/authguard-service.png" alt="code" />
+  <p>auth.guard.ts</p>
+  <img src="../../../assets/images/authguard-guard.png" alt="code" />
+  <p>app-routing.module.ts</p>
+  <img src="../../../assets/images/authguard-route.png" alt="code" />
+</div>

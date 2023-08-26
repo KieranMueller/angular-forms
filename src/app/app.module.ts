@@ -47,6 +47,10 @@ import { MaterialsComponent } from './materialsnav/materials/materials.component
 import { SpinnerComponent } from './materialsnav/spinner/spinner.component';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { ForkjoinComponent } from './observables/forkjoin/forkjoin.component';
+import { ObservableComponent } from './observables/observable/observable.component';
+import { AuthguardnavComponent } from './authguardnav/authguardnav.component';
+import { AuthguardComponent } from './authguardnav/authguard/authguard.component';
+import { SecretComponent } from './authguardnav/secret/secret.component';
 
 @NgModule({
   declarations: [
@@ -87,6 +91,10 @@ import { ForkjoinComponent } from './observables/forkjoin/forkjoin.component';
     MaterialsComponent,
     SpinnerComponent,
     ForkjoinComponent,
+    ObservableComponent,
+    AuthguardnavComponent,
+    AuthguardComponent,
+    SecretComponent,
   ],
   imports: [
     BrowserModule,

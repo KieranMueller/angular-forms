@@ -1,0 +1,11 @@
+<div class="container">
+  <button routerLink="">Back to Home</button>
+  <button routerLink="/authguard" routerLinkActive="active">Auth Guard</button>
+  <button
+    [ngClass]="{ disabled: !isLoggedIn }"
+    routerLink="/secret"
+    routerLinkActive="active"
+  >
+    Secret
+  </button>
+</div>
