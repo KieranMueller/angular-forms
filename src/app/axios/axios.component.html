@@ -1,14 +1,16 @@
-<button routerLink="">Back to Home</button>
-<p>Data: {{ data | json }}</p>
-<button (click)="getStuff()">Send GET request</button>
-<button (click)="getError()">Send bad request</button>
-
-<h2>Steps</h2>
-<ul>
-  <li>(Angular HttpClient is preferred over axios)</li>
-  <li>ng add axios</li>
-  <li>import axios from 'axios';</li>
-</ul>
-
-<img src="../../assets/images/axios-ts.png" alt="code" />
-<img src="../../assets/images/axios-html.png" alt="code" />
+<div class="container">
+  <button routerLink="">Back to Home</button>
+  <div class="box">
+    <p>Data: {{ data | json }}</p>
+    <button (click)="getStuff()">Send GET request</button>
+    <button (click)="getError()">Send bad request</button>
+  </div>
+  <h2>Steps</h2>
+  <ul>
+    <li>(Angular HttpClient is preferred over axios)</li>
+    <li>ng add axios</li>
+    <li>import axios from 'axios';</li>
+  </ul>
+  <img src="../../assets/images/axios-ts.png" alt="code" />
+  <img src="../../assets/images/axios-html.png" alt="code" />
+</div>

@@ -1,19 +1,21 @@
 <app-materialsnav></app-materialsnav>
-<form [formGroup]="form">
-  <input
-    type="text"
-    placeholder="Pick one"
-    aria-label="Number"
-    matInput
-    formControlName="myControl"
-    [matAutocomplete]="auto"
-  />
-  <mat-autocomplete #auto="matAutocomplete">
-    <mat-option *ngFor="let option of options" [value]="option">
-      {{ option }}
-    </mat-option>
-  </mat-autocomplete>
-</form>
-<p>value: {{ form.value.myControl }}</p>
-<img src="../../../assets/images/autocomplete-ts.png" alt="code" />
-<img src="../../../assets/images/autocomplete-html.png" alt="code" />
+<div class="container">
+  <form [formGroup]="form">
+    <input
+      type="text"
+      placeholder="Pick one"
+      aria-label="Number"
+      matInput
+      formControlName="myControl"
+      [matAutocomplete]="auto"
+    />
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of options" [value]="option">
+        {{ option }}
+      </mat-option>
+    </mat-autocomplete>
+  </form>
+  <p>value: {{ form.value.myControl }}</p>
+  <img src="../../../assets/images/autocomplete-ts.png" alt="code" />
+  <img src="../../../assets/images/autocomplete-html.png" alt="code" />
+</div>

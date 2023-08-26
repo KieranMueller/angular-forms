@@ -1,3 +1,16 @@
+.container {
+  margin-left: 30px;
+  margin-top: 10px;
+}
+
+.box {
+  margin-top: 10px;
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  width: max-content;
+}
+
 button {
   margin: 10px;
 }
