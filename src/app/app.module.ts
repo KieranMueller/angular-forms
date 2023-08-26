@@ -51,6 +51,12 @@ import { ObservableComponent } from './observables/observable/observable.compone
 import { AuthguardnavComponent } from './authguardnav/authguardnav.component';
 import { AuthguardComponent } from './authguardnav/authguard/authguard.component';
 import { SecretComponent } from './authguardnav/secret/secret.component';
+import { RoutingnavComponent } from './routingnav/routingnav.component';
+import { RouterlinkComponent } from './routingnav/routerlink/routerlink.component';
+import { NotfoundComponent } from './routingnav/notfound/notfound.component';
+import { FirstComponent } from './routingnav/first/first.component';
+import { SecondComponent } from './routingnav/second/second.component';
+import { SpecialComponent } from './routingnav/special/special.component';
 
 @NgModule({
   declarations: [
@@ -95,6 +101,12 @@ import { SecretComponent } from './authguardnav/secret/secret.component';
     AuthguardnavComponent,
     AuthguardComponent,
     SecretComponent,
+    RoutingnavComponent,
+    RouterlinkComponent,
+    NotfoundComponent,
+    FirstComponent,
+    SecondComponent,
+    SpecialComponent,
   ],
   imports: [
     BrowserModule,

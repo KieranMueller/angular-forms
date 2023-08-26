@@ -26,6 +26,11 @@ import { ObservableComponent } from './observables/observable/observable.compone
 import { AuthguardComponent } from './authguardnav/authguard/authguard.component';
 import { SecretComponent } from './authguardnav/secret/secret.component';
 import { authGuard } from './authguardnav/auth.guard';
+import { RouterlinkComponent } from './routingnav/routerlink/routerlink.component';
+import { NotfoundComponent } from './routingnav/notfound/notfound.component';
+import { FirstComponent } from './routingnav/first/first.component';
+import { SecondComponent } from './routingnav/second/second.component';
+import { SpecialComponent } from './routingnav/special/special.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -119,6 +124,28 @@ const routes: Routes = [
     path: 'secret',
     component: SecretComponent,
     canActivate: [authGuard],
+  },
+  {
+    path: 'routerlink',
+    component: RouterlinkComponent,
+    children: [
+      {
+        path: 'special-route',
+        component: SpecialComponent,
+      },
+    ],
+  },
+  {
+    path: 'first-route',
+    component: FirstComponent,
+  },
+  {
+    path: 'second-route',
+    component: SecondComponent,
+  },
+  {
+    path: '**',
+    component: NotfoundComponent,
   },
 ];
 

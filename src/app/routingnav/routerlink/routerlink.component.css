@@ -1,0 +1,18 @@
+.container {
+  margin: 30px;
+}
+
+.box {
+  padding: 20px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  width: max-content;
+}
+
+.box button {
+  margin: 10px;
+}
+
+img {
+  margin: 20px;
+}

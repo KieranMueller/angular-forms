@@ -1,0 +1,27 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 97vw;
+  height: 97vh;
+}
+
+.content {
+  padding: 30px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  margin-top: 10px;
+}
+
+img {
+  margin: 5px;
+}
