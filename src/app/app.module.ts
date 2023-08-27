@@ -61,6 +61,7 @@ import { AttributeDirectivesNavComponent } from './attribute-directives-nav/attr
 import { AttributeDirectivesStylingComponent } from './attribute-directives-nav/attribute-directives-styling/attribute-directives-styling.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { OfPipeMapComponent } from './rxjs/of-pipe-map/of-pipe-map.component';
+import { RxjsFirstComponent } from './rxjs/rxjs-first/rxjs-first.component';
 
 @NgModule({
   declarations: [
@@ -115,6 +116,7 @@ import { OfPipeMapComponent } from './rxjs/of-pipe-map/of-pipe-map.component';
     AttributeDirectivesStylingComponent,
     RxjsComponent,
     OfPipeMapComponent,
+    RxjsFirstComponent,
   ],
   imports: [
     BrowserModule,
