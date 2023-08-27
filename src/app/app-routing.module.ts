@@ -32,6 +32,7 @@ import { FirstComponent } from './routingnav/first/first.component';
 import { SecondComponent } from './routingnav/second/second.component';
 import { SpecialComponent } from './routingnav/special/special.component';
 import { AttributeDirectivesStylingComponent } from './attribute-directives-nav/attribute-directives-styling/attribute-directives-styling.component';
+import { OfPipeMapComponent } from './rxjs/of-pipe-map/of-pipe-map.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -147,6 +148,10 @@ const routes: Routes = [
   {
     path: 'styling',
     component: AttributeDirectivesStylingComponent,
+  },
+  {
+    path: 'of-pipe-map',
+    component: OfPipeMapComponent,
   },
   {
     path: '**',

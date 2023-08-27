@@ -59,6 +59,8 @@ import { SecondComponent } from './routingnav/second/second.component';
 import { SpecialComponent } from './routingnav/special/special.component';
 import { AttributeDirectivesNavComponent } from './attribute-directives-nav/attribute-directives-nav.component';
 import { AttributeDirectivesStylingComponent } from './attribute-directives-nav/attribute-directives-styling/attribute-directives-styling.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { OfPipeMapComponent } from './rxjs/of-pipe-map/of-pipe-map.component';
 
 @NgModule({
   declarations: [
@@ -111,6 +113,8 @@ import { AttributeDirectivesStylingComponent } from './attribute-directives-nav/
     SpecialComponent,
     AttributeDirectivesNavComponent,
     AttributeDirectivesStylingComponent,
+    RxjsComponent,
+    OfPipeMapComponent,
   ],
   imports: [
     BrowserModule,
