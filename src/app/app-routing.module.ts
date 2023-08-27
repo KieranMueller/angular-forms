@@ -31,6 +31,7 @@ import { NotfoundComponent } from './routingnav/notfound/notfound.component';
 import { FirstComponent } from './routingnav/first/first.component';
 import { SecondComponent } from './routingnav/second/second.component';
 import { SpecialComponent } from './routingnav/special/special.component';
+import { AttributeDirectivesStylingComponent } from './attribute-directives-nav/attribute-directives-styling/attribute-directives-styling.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -142,6 +143,10 @@ const routes: Routes = [
   {
     path: 'second-route',
     component: SecondComponent,
+  },
+  {
+    path: 'styling',
+    component: AttributeDirectivesStylingComponent,
   },
   {
     path: '**',

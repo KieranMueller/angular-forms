@@ -1,0 +1,40 @@
+.container {
+  margin: 30px;
+}
+
+.box {
+  padding: 30px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  width: max-content;
+}
+
+img {
+  margin: 20px;
+}
+
+p {
+  width: fit-content;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.red {
+  color: lightcoral;
+}
+
+.green {
+  color: lightgreen;
+}
+
+.big {
+  font-size: 26px;
+}
+
+.small {
+  font-size: 14px;
+}
+
+.light-background {
+  background: rgb(98, 98, 98);
+}

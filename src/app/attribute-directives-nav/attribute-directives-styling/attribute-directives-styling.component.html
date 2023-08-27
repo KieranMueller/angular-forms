@@ -1,0 +1,39 @@
+<app-attribute-directives-nav></app-attribute-directives-nav>
+<div class="container">
+  <div class="box">
+    <p [class.green]="isTruthy" [class.red]="!isTruthy">
+      If truthy, I will be green, otherwise I will be red!
+    </p>
+    <p [ngClass]="['small', 'light-background']">
+      I am receiving an array of css classes
+    </p>
+    <p
+      [ngClass]="{
+        big: isTruthy,
+        green: isTruthy,
+        small: !isTruthy,
+        red: !isTruthy
+      }"
+    >
+      I am big and green when truthy, and small and red when falsy
+    </p>
+    <p [ngClass]="{ 'light-background': true }">
+      Notice the hyphenated css class must be passed as a string, and is always
+      truthy
+    </p>
+    <p [ngClass]="changeClasses()">
+      If we have many classes, we can delegate to the component
+    </p>
+    <p [style.background]="isTruthy ? 'blue' : 'gray'">
+      first example using [style]
+    </p>
+    <p [ngStyle]="{ background: isTruthy ? 'blue' : 'gray' }">
+      example using [ngStyle]
+    </p>
+    <button (click)="isTruthy = !isTruthy">
+      toggle boolean: currently {{ isTruthy ? "truthy" : "falsy" }}
+    </button>
+  </div>
+  <img src="../../../assets/images/styling-ts.png" alt="code" />
+  <img src="../../../assets/images/styles-html.png" alt="code" />
+</div>
