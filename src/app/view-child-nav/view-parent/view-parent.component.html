@@ -1,55 +1,57 @@
 <app-view-child-nav></app-view-child-nav>
-<div>
-  <h3>parent</h3>
-  <button (click)="decrement()">decrement</button>
-  <button (click)="increment()">increment</button>
+<div class="container">
+  <div class="code">
+    <h3>parent</h3>
+    <button (click)="decrement()">decrement</button>
+    <button (click)="increment()">increment</button>
+  </div>
+  <app-view-child></app-view-child>
+  <h3 class="text">
+    here, we are using view child to access the increment and decrement methods
+    on the child component when we click buttons in the parent component. The
+    running count is then displayed and updated in the Child's template
+  </h3>
+  <p *ngIf="showChildHtml && showChildTs && showParentHtml && showParentTs">
+    click image for copyable code
+  </p>
+  <div *ngIf="!showParentTs">
+    <button (click)="showParentTs = true">revert</button>
+    <pre>{{ parentTs }}</pre>
+  </div>
+  <img
+    *ngIf="showParentTs"
+    (click)="showParentTs = false"
+    src="../../../assets/images/view-parent-ts.png"
+    alt="code"
+  />
+  <div *ngIf="!showParentHtml">
+    <button (click)="showParentHtml = true">revert</button>
+    <pre>{{ parentHtml }}</pre>
+  </div>
+  <img
+    *ngIf="showParentHtml"
+    (click)="showParentHtml = false"
+    src="../../../assets/images/view-parent-html.png"
+    alt="code"
+  />
+  <div *ngIf="!showChildTs">
+    <button (click)="showChildTs = true">revert</button>
+    <pre>{{ childTs }}</pre>
+  </div>
+  <img
+    *ngIf="showChildTs"
+    (click)="showChildTs = false"
+    src="../../../assets/images/view-child-ts.png"
+    alt="code"
+  />
+  <div *ngIf="!showChildHtml">
+    <button (click)="showChildHtml = true">revert</button>
+    <pre>{{ childHtml }}</pre>
+  </div>
+  <img
+    *ngIf="showChildHtml"
+    (click)="showChildHtml = false"
+    src="../../../assets/images/view-child-html.png"
+    alt="code"
+  />
 </div>
-<app-view-child></app-view-child>
-<h3 class="text">
-  here, we are using view child to access the increment and decrement methods on
-  the child component when we click buttons in the parent component. The running
-  count is then displayed and updated in the Child's template
-</h3>
-<p *ngIf="showChildHtml && showChildTs && showParentHtml && showParentTs">
-  click image for copyable code
-</p>
-<div *ngIf="!showParentTs">
-  <button (click)="showParentTs = true">revert</button>
-  <pre>{{ parentTs }}</pre>
-</div>
-<img
-  *ngIf="showParentTs"
-  (click)="showParentTs = false"
-  src="../../../assets/images/view-parent-ts.png"
-  alt="code"
-/>
-<div *ngIf="!showParentHtml">
-  <button (click)="showParentHtml = true">revert</button>
-  <pre>{{ parentHtml }}</pre>
-</div>
-<img
-  *ngIf="showParentHtml"
-  (click)="showParentHtml = false"
-  src="../../../assets/images/view-parent-html.png"
-  alt="code"
-/>
-<div *ngIf="!showChildTs">
-  <button (click)="showChildTs = true">revert</button>
-  <pre>{{ childTs }}</pre>
-</div>
-<img
-  *ngIf="showChildTs"
-  (click)="showChildTs = false"
-  src="../../../assets/images/view-child-ts.png"
-  alt="code"
-/>
-<div *ngIf="!showChildHtml">
-  <button (click)="showChildHtml = true">revert</button>
-  <pre>{{ childHtml }}</pre>
-</div>
-<img
-  *ngIf="showChildHtml"
-  (click)="showChildHtml = false"
-  src="../../../assets/images/view-child-html.png"
-  alt="code"
-/>

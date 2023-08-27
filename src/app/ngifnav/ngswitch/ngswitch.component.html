@@ -1,34 +1,38 @@
 <app-ngifnav></app-ngifnav>
-<p>
-  <button (click)="count = count - 1">-</button> count: {{ count }}
-  <button (click)="count = count + 1">+</button>
-</p>
-<div [ngSwitch]="count">
-  <p *ngSwitchCase="-4">count is -4</p>
-  <p *ngSwitchCase="-2">count is -2</p>
-  <p *ngSwitchCase="0">count is 0</p>
-  <p *ngSwitchCase="2">count is 2</p>
-  <p *ngSwitchCase="4">count is 4</p>
-  <p *ngSwitchDefault>default!</p>
+<div class="container">
+  <div class="code">
+    <p>
+      <button (click)="count = count - 1">-</button> count: {{ count }}
+      <button (click)="count = count + 1">+</button>
+    </p>
+    <div [ngSwitch]="count">
+      <p *ngSwitchCase="-4">count is -4</p>
+      <p *ngSwitchCase="-2">count is -2</p>
+      <p *ngSwitchCase="0">count is 0</p>
+      <p *ngSwitchCase="2">count is 2</p>
+      <p *ngSwitchCase="4">count is 4</p>
+      <p *ngSwitchDefault>default!</p>
+    </div>
+  </div>
+  <p *ngIf="showTs && showHtml">click image for copyable code</p>
+  <div *ngIf="!showTs">
+    <button (click)="showTs = true">revert</button>
+    <pre>{{ ts }}</pre>
+  </div>
+  <img
+    *ngIf="showTs"
+    (click)="showTs = false"
+    src="../../../assets/images/ngswitch-ts.png"
+    alt="code"
+  />
+  <div *ngIf="!showHtml">
+    <button (click)="showHtml = true">revert</button>
+    <pre>{{ html }}</pre>
+  </div>
+  <img
+    *ngIf="showHtml"
+    (click)="showHtml = false"
+    src="../../../assets/images/ngswitch-html.png"
+    alt="code"
+  />
 </div>
-<p *ngIf="showTs && showHtml">click image for copyable code</p>
-<div *ngIf="!showTs">
-  <button (click)="showTs = true">revert</button>
-  <pre>{{ ts }}</pre>
-</div>
-<img
-  *ngIf="showTs"
-  (click)="showTs = false"
-  src="../../../assets/images/ngswitch-ts.png"
-  alt="code"
-/>
-<div *ngIf="!showHtml">
-  <button (click)="showHtml = true">revert</button>
-  <pre>{{ html }}</pre>
-</div>
-<img
-  *ngIf="showHtml"
-  (click)="showHtml = false"
-  src="../../../assets/images/ngswitch-html.png"
-  alt="code"
-/>

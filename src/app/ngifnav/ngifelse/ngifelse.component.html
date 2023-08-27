@@ -1,31 +1,35 @@
 <app-ngifnav></app-ngifnav>
-<div class="logic">
-  <div *ngIf="selected; else notSelected">Show me if 'selected = true'</div>
-  <ng-template #notSelected>
-    <div>Show me if 'selected = false'</div>
-  </ng-template>
-  <button (click)="selected = !selected">selected = {{ selected }}</button>
-</div>
-<div class="img-div">
-  <p *ngIf="showHtml && showTs">click image for copyable code</p>
-  <div *ngIf="!showTs">
-    <button (click)="showTs = true">revert</button>
-    <pre>{{ snippet }}</pre>
+<div class="container">
+  <div class="logic">
+    <div *ngIf="selected; else notSelected">Show me if 'selected = true'</div>
+    <ng-template #notSelected>
+      <div>Show me if 'selected = false'</div>
+    </ng-template>
+    <button class="btn" (click)="selected = !selected">
+      selected = {{ selected }}
+    </button>
   </div>
-  <img
-    (click)="showTs = false"
-    *ngIf="showTs"
-    src="../../assets/images/ngifelse-ts.png"
-    alt="code"
-  />
-  <div *ngIf="!showHtml">
-    <button (click)="showHtml = true">revert</button>
-    <pre>{{ snippet1 }}</pre>
+  <div class="img-div">
+    <p *ngIf="showHtml && showTs">click image for copyable code</p>
+    <div *ngIf="!showTs">
+      <button (click)="showTs = true">revert</button>
+      <pre>{{ snippet }}</pre>
+    </div>
+    <img
+      (click)="showTs = false"
+      *ngIf="showTs"
+      src="../../assets/images/ngifelse-ts.png"
+      alt="code"
+    />
+    <div *ngIf="!showHtml">
+      <button (click)="showHtml = true">revert</button>
+      <pre>{{ snippet1 }}</pre>
+    </div>
+    <img
+      (click)="showHtml = false"
+      *ngIf="showHtml"
+      src="../../assets/images/ngifelse-html.png"
+      alt="code"
+    />
   </div>
-  <img
-    (click)="showHtml = false"
-    *ngIf="showHtml"
-    src="../../assets/images/ngifelse-html.png"
-    alt="code"
-  />
 </div>

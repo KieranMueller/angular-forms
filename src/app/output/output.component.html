@@ -1,80 +1,84 @@
-<button routerLink="">back to home</button>
-<app-output-parent></app-output-parent>
-<h3>in this example</h3>
-<ul>
-  <li>
-    we create a parent component with a variable 'messageFromChild' that we
-    <br />
-    expect to receive from the child component
-  </li>
-  <li>
-    we include the value of this variable in our template, initially it is an
-    empty string
-  </li>
-  <li>we include the child component selector in the parent's template</li>
-  <li>
-    we create a method in the parent component, to handle the value emitted from
-    <br />the child, setting it equal to our 'messageFromChild' variable
-  </li>
-  <li>
-    in the child, we create a variable 'message' that will hold the value we'd
-    like to <br />emit to the parent - using two way binding with an input and
-    [(ng-model)]
-  </li>
-  <li>we create the event emitter named 'emitter'</li>
-  <li>
-    we create a button with a click event, that fires the 'emitEvent()' function
-  </li>
-  <li>
-    in this function, we emit our EventEmitter 'emitter', passing <br />the
-    value of 'message' to the parent
-  </li>
-  <li>
-    now, we must receive the event in the parent template, and call our <br />
-    'receiveEvent()' function, passing the value emitted from the child as
-    '$event'
-  </li>
-</ul>
-<p *ngIf="showParentHtml && showParentTs && showChildHtml && showChildTs">
-  click image for copyable code
-</p>
-<div *ngIf="!showParentTs">
-  <button (click)="showParentTs = true">revert</button>
-  <pre>{{ parentTs }}</pre>
+<div class="container">
+  <button class="home-btn" routerLink="">back to home</button>
+  <app-output-parent></app-output-parent>
+  <h3>in this example</h3>
+  <ul>
+    <li>
+      we create a parent component with a variable 'messageFromChild' that we
+      <br />
+      expect to receive from the child component
+    </li>
+    <li>
+      we include the value of this variable in our template, initially it is an
+      empty string
+    </li>
+    <li>we include the child component selector in the parent's template</li>
+    <li>
+      we create a method in the parent component, to handle the value emitted
+      from
+      <br />the child, setting it equal to our 'messageFromChild' variable
+    </li>
+    <li>
+      in the child, we create a variable 'message' that will hold the value we'd
+      like to <br />emit to the parent - using two way binding with an input and
+      [(ng-model)]
+    </li>
+    <li>we create the event emitter named 'emitter'</li>
+    <li>
+      we create a button with a click event, that fires the 'emitEvent()'
+      function
+    </li>
+    <li>
+      in this function, we emit our EventEmitter 'emitter', passing <br />the
+      value of 'message' to the parent
+    </li>
+    <li>
+      now, we must receive the event in the parent template, and call our <br />
+      'receiveEvent()' function, passing the value emitted from the child as
+      '$event'
+    </li>
+  </ul>
+  <p *ngIf="showParentHtml && showParentTs && showChildHtml && showChildTs">
+    click image for copyable code
+  </p>
+  <div *ngIf="!showParentTs">
+    <button (click)="showParentTs = true">revert</button>
+    <pre>{{ parentTs }}</pre>
+  </div>
+  <img
+    *ngIf="showParentTs"
+    (click)="showParentTs = false"
+    src="../../assets/images/output-parent-ts.png"
+    alt="code"
+  />
+  <div *ngIf="!showParentHtml">
+    <button (click)="showParentHtml = true">revert</button>
+    <pre>{{ parentHtml }}</pre>
+  </div>
+  <img
+    *ngIf="showParentHtml"
+    (click)="showParentHtml = false"
+    src="../../assets/images/output-parent-html.png"
+    alt="code"
+  />
+  <div *ngIf="!showChildTs">
+    <button (click)="showChildTs = true">revert</button>
+    <pre>{{ childTs }}</pre>
+  </div>
+  <img
+    *ngIf="showChildTs"
+    (click)="showChildTs = false"
+    src="../../assets/images/output-child-ts.png"
+    alt="code"
+  />
+  <div *ngIf="!showChildHtml">
+    <button (click)="showChildHtml = true">revert</button>
+    <pre>{{ childHtml }}</pre>
+  </div>
+  <img
+    *ngIf="showChildHtml"
+    (click)="showChildHtml = false"
+    src="../../assets/images/output-child-html.png"
+    alt="code"
+  />
 </div>
-<img
-  *ngIf="showParentTs"
-  (click)="showParentTs = false"
-  src="../../assets/images/output-parent-ts.png"
-  alt="code"
-/>
-<div *ngIf="!showParentHtml">
-  <button (click)="showParentHtml = true">revert</button>
-  <pre>{{ parentHtml }}</pre>
-</div>
-<img
-  *ngIf="showParentHtml"
-  (click)="showParentHtml = false"
-  src="../../assets/images/output-parent-html.png"
-  alt="code"
-/>
-<div *ngIf="!showChildTs">
-  <button (click)="showChildTs = true">revert</button>
-  <pre>{{ childTs }}</pre>
-</div>
-<img
-  *ngIf="showChildTs"
-  (click)="showChildTs = false"
-  src="../../assets/images/output-child-ts.png"
-  alt="code"
-/>
-<div *ngIf="!showChildHtml">
-  <button (click)="showChildHtml = true">revert</button>
-  <pre>{{ childHtml }}</pre>
-</div>
-<img
-  *ngIf="showChildHtml"
-  (click)="showChildHtml = false"
-  src="../../assets/images/output-child-html.png"
-  alt="code"
-/>

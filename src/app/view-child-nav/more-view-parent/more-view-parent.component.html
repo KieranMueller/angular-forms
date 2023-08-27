@@ -1,29 +1,31 @@
 <app-view-child-nav></app-view-child-nav>
-<div class="container">
-  <p class="text" #text>this is my text before view init</p>
-  <h3>
-    Here, we are changing the text content of this paragraph element after view
-    init using @ViewChild()
-  </h3>
+<div class="container1">
+  <div class="container">
+    <p class="text" #text>this is my text before view init</p>
+    <h3>
+      Here, we are changing the text content of this paragraph element after
+      view init using @ViewChild()
+    </h3>
+  </div>
+  <p *ngIf="showTs && showHtml">click image for copyable code</p>
+  <div *ngIf="!showTs">
+    <button (click)="showTs = true">revert</button>
+    <pre>{{ ts }}</pre>
+  </div>
+  <img
+    *ngIf="showTs"
+    (click)="showTs = false"
+    src="../../../assets/images/more-view-child-ts.png"
+    alt="code"
+  />
+  <div *ngIf="!showHtml">
+    <button (click)="showHtml = true">revert</button>
+    <pre>{{ html }}</pre>
+  </div>
+  <img
+    *ngIf="showHtml"
+    (click)="showHtml = false"
+    src="../../../assets/images/more-view-child-html.png"
+    alt="code"
+  />
 </div>
-<p *ngIf="showTs && showHtml">click image for copyable code</p>
-<div *ngIf="!showTs">
-  <button (click)="showTs = true">revert</button>
-  <pre>{{ ts }}</pre>
-</div>
-<img
-  *ngIf="showTs"
-  (click)="showTs = false"
-  src="../../../assets/images/more-view-child-ts.png"
-  alt="code"
-/>
-<div *ngIf="!showHtml">
-  <button (click)="showHtml = true">revert</button>
-  <pre>{{ html }}</pre>
-</div>
-<img
-  *ngIf="showHtml"
-  (click)="showHtml = false"
-  src="../../../assets/images/more-view-child-html.png"
-  alt="code"
-/>
