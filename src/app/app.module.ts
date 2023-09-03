@@ -62,6 +62,9 @@ import { AttributeDirectivesStylingComponent } from './attribute-directives-nav/
 import { RxjsComponent } from './rxjs/rxjs.component';
 import { OfPipeMapComponent } from './rxjs/of-pipe-map/of-pipe-map.component';
 import { RxjsFirstComponent } from './rxjs/rxjs-first/rxjs-first.component';
+import { SubSinkComponent } from './rxjs/sub-sink/sub-sink.component';
+import { UnitTestingNavComponent } from './unit-testing-nav/unit-testing-nav.component';
+import { BasicUnitTestComponent } from './unit-testing-nav/basic-unit-test/basic-unit-test.component';
 
 @NgModule({
   declarations: [
@@ -117,6 +120,9 @@ import { RxjsFirstComponent } from './rxjs/rxjs-first/rxjs-first.component';
     RxjsComponent,
     OfPipeMapComponent,
     RxjsFirstComponent,
+    SubSinkComponent,
+    UnitTestingNavComponent,
+    BasicUnitTestComponent,
   ],
   imports: [
     BrowserModule,

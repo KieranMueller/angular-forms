@@ -34,6 +34,8 @@ import { SpecialComponent } from './routingnav/special/special.component';
 import { AttributeDirectivesStylingComponent } from './attribute-directives-nav/attribute-directives-styling/attribute-directives-styling.component';
 import { OfPipeMapComponent } from './rxjs/of-pipe-map/of-pipe-map.component';
 import { RxjsFirstComponent } from './rxjs/rxjs-first/rxjs-first.component';
+import { SubSinkComponent } from './rxjs/sub-sink/sub-sink.component';
+import { BasicUnitTestComponent } from './unit-testing-nav/basic-unit-test/basic-unit-test.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -157,6 +159,14 @@ const routes: Routes = [
   {
     path: 'rxjs-first',
     component: RxjsFirstComponent,
+  },
+  {
+    path: 'rxjs-subsink',
+    component: SubSinkComponent,
+  },
+  {
+    path: 'basic-unit-test',
+    component: BasicUnitTestComponent,
   },
   {
     path: '**',

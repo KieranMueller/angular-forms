@@ -1,0 +1,13 @@
+<app-unit-testing-nav></app-unit-testing-nav>
+<div class="container">
+  <h3 class="name">{{ name }}</h3>
+  <div class="add">
+    <input type="number" [(ngModel)]="num1" />
+    <h1>+</h1>
+    <input type="number" [(ngModel)]="num2" />
+    <h1>=</h1>
+    <h1 class="sum">{{ getSum(num1, num2) }}</h1>
+  </div>
+  <p *ngIf="(num1 + num2) % 2 === 0 && num1 + num2 != 0">even</p>
+  <p *ngIf="(num1 + num2) % 2 === 1">odd</p>
+</div>

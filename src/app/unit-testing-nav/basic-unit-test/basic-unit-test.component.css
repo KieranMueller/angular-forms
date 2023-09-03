@@ -1,0 +1,17 @@
+.container {
+  margin-left: 30px;
+  border: 1px solid gray;
+  padding: 20px;
+  border-radius: 20px;
+  width: max-content;
+}
+
+.add {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sum {
+  margin-left: 10px;
+}
