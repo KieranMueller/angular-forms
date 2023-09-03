@@ -65,6 +65,9 @@ import { RxjsFirstComponent } from './rxjs/rxjs-first/rxjs-first.component';
 import { SubSinkComponent } from './rxjs/sub-sink/sub-sink.component';
 import { UnitTestingNavComponent } from './unit-testing-nav/unit-testing-nav.component';
 import { BasicUnitTestComponent } from './unit-testing-nav/basic-unit-test/basic-unit-test.component';
+import { GraphqlnavComponent } from './graphqlnav/graphqlnav.component';
+import { GraphqlComponent } from './graphqlnav/graphql/graphql.component';
+import { GraphQLModule } from './graphql.module';
 
 @NgModule({
   declarations: [
@@ -123,6 +126,8 @@ import { BasicUnitTestComponent } from './unit-testing-nav/basic-unit-test/basic
     SubSinkComponent,
     UnitTestingNavComponent,
     BasicUnitTestComponent,
+    GraphqlnavComponent,
+    GraphqlComponent,
   ],
   imports: [
     BrowserModule,
@@ -139,6 +144,7 @@ import { BasicUnitTestComponent } from './unit-testing-nav/basic-unit-test/basic
       sanitize: SecurityContext.NONE,
     }),
     BrowserAnimationsModule,
+    GraphQLModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

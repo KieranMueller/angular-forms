@@ -36,6 +36,7 @@ import { OfPipeMapComponent } from './rxjs/of-pipe-map/of-pipe-map.component';
 import { RxjsFirstComponent } from './rxjs/rxjs-first/rxjs-first.component';
 import { SubSinkComponent } from './rxjs/sub-sink/sub-sink.component';
 import { BasicUnitTestComponent } from './unit-testing-nav/basic-unit-test/basic-unit-test.component';
+import { GraphqlComponent } from './graphqlnav/graphql/graphql.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -167,6 +168,10 @@ const routes: Routes = [
   {
     path: 'basic-unit-test',
     component: BasicUnitTestComponent,
+  },
+  {
+    path: 'graphql',
+    component: GraphqlComponent,
   },
   {
     path: '**',
