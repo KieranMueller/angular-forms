@@ -37,6 +37,7 @@ import { RxjsFirstComponent } from './rxjs/rxjs-first/rxjs-first.component';
 import { SubSinkComponent } from './rxjs/sub-sink/sub-sink.component';
 import { BasicUnitTestComponent } from './unit-testing-nav/basic-unit-test/basic-unit-test.component';
 import { GraphqlComponent } from './graphqlnav/graphql/graphql.component';
+import { NgContentParentComponent } from './content-projection-nav/ng-content/ng-content-parent/ng-content-parent.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -172,6 +173,10 @@ const routes: Routes = [
   {
     path: 'graphql',
     component: GraphqlComponent,
+  },
+  {
+    path: 'ng-content',
+    component: NgContentParentComponent,
   },
   {
     path: '**',

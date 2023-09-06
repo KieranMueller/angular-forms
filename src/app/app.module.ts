@@ -68,6 +68,9 @@ import { BasicUnitTestComponent } from './unit-testing-nav/basic-unit-test/basic
 import { GraphqlnavComponent } from './graphqlnav/graphqlnav.component';
 import { GraphqlComponent } from './graphqlnav/graphql/graphql.component';
 import { GraphQLModule } from './graphql.module';
+import { ContentProjectionNavComponent } from './content-projection-nav/content-projection-nav.component';
+import { NgContentParentComponent } from './content-projection-nav/ng-content/ng-content-parent/ng-content-parent.component';
+import { NgContentChildComponent } from './content-projection-nav/ng-content/ng-content-child/ng-content-child.component';
 
 @NgModule({
   declarations: [
@@ -128,6 +131,9 @@ import { GraphQLModule } from './graphql.module';
     BasicUnitTestComponent,
     GraphqlnavComponent,
     GraphqlComponent,
+    ContentProjectionNavComponent,
+    NgContentParentComponent,
+    NgContentChildComponent,
   ],
   imports: [
     BrowserModule,
