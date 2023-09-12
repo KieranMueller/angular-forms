@@ -1,0 +1,23 @@
+a {
+  display: block;
+  width: max-content;
+  color: whitesmoke;
+  margin: 40px;
+}
+
+.container {
+  margin-left: 30px;
+  padding-bottom: 20px;
+}
+
+.logic {
+  padding: 20px;
+  width: max-content;
+  border: 1px solid grey;
+  border-radius: 20px;
+}
+
+img {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}

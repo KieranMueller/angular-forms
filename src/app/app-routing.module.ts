@@ -40,6 +40,8 @@ import { GraphqlComponent } from './graphqlnav/graphql/graphql.component';
 import { NgContentParentComponent } from './content-projection-nav/ng-content/ng-content-parent/ng-content-parent.component';
 import { NgTemplateComponent } from './content-projection-nav/ng-template/ng-template.component';
 import { NgContainerComponent } from './content-projection-nav/ng-container/ng-container.component';
+import { RouteParamsComponent } from './routingnav/route-params/route-params.component';
+import { TestParamComponent } from './routingnav/test-param/test-param.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -187,6 +189,14 @@ const routes: Routes = [
   {
     path: 'ng-container',
     component: NgContainerComponent,
+  },
+  {
+    path: 'route-params',
+    component: RouteParamsComponent,
+  },
+  {
+    path: 'test-param/:id',
+    component: TestParamComponent,
   },
   {
     path: '**',

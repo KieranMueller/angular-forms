@@ -73,6 +73,8 @@ import { NgContentParentComponent } from './content-projection-nav/ng-content/ng
 import { NgContentChildComponent } from './content-projection-nav/ng-content/ng-content-child/ng-content-child.component';
 import { NgTemplateComponent } from './content-projection-nav/ng-template/ng-template.component';
 import { NgContainerComponent } from './content-projection-nav/ng-container/ng-container.component';
+import { RouteParamsComponent } from './routingnav/route-params/route-params.component';
+import { TestParamComponent } from './routingnav/test-param/test-param.component';
 
 @NgModule({
   declarations: [
@@ -138,6 +140,8 @@ import { NgContainerComponent } from './content-projection-nav/ng-container/ng-c
     NgContentChildComponent,
     NgTemplateComponent,
     NgContainerComponent,
+    RouteParamsComponent,
+    TestParamComponent,
   ],
   imports: [
     BrowserModule,

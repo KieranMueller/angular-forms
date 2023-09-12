@@ -1,0 +1,75 @@
+<app-routingnav></app-routingnav>
+<div class="container">
+  <div class="logic">
+    <a [routerLink]="['/test-param', 1]">1</a>
+    <a [routerLink]="['/test-param', 2]">2</a>
+    <a [routerLink]="['/test-param', 3]">3</a>
+    <p>(Or enter custom id)</p>
+    <input type="number" [(ngModel)]="customId" (keyup.enter)="handleEnter()" />
+    <button [routerLink]="['/test-param', customId]" [disabled]="!customId">
+      Go
+    </button>
+  </div>
+  <h3>Route params are typically dynamic</h3>
+  <ul>
+    <li>For example, you may see a list of items while shopping online</li>
+    <li>
+      When you click on an item, you expect to see a new page, <br />
+      with more detail of that selected item
+    </li>
+    <li>
+      The new component/page needs to know which item to load, <br />
+      this comes from the route params, likely sending an HTTP <br />
+      request to then get that item from the backend, passing its ID/primary key
+      in a GET request
+    </li>
+  </ul>
+  <h3>Steps in this example</h3>
+  <ul>
+    <li>Create a few links (here we have '1', '2', and '3')</li>
+    <li>
+      Add [routerLink]="['/test-param', 1]" to the HTML tags you'd like to route
+      <br />
+      from when clicked, where '1' is the ID
+    </li>
+    <li>
+      Create a new component that you'd like to render when this link is
+      clicked, here we <br />
+      are using 'TestParamComponent', make sure to add this component to your
+      <br />
+      declarations array within app.module.ts
+    </li>
+    <li>
+      Within app-routing.module.ts, add {{ "{" }} path: 'test-param/:id',
+      component: TestParamComponent, {{ "}" }} <br />
+      to the routes array, notice '/:id' - this is where the id passed to the
+      route will be passed
+    </li>
+    <li>
+      In the component we are navigating to (TestParamComponent in this
+      example), use the constructor <br />
+      to inject the ActivatedRoute
+    </li>
+    <li>
+      OnInit, we are able to access this parameter from the url, and assign it
+      to a variable, 'id' in this case
+    </li>
+    <li>
+      Now, you can use that variable in your template, or maybe you'd like to
+      send an HTTP request to <br />
+      GET an item by ID (ex. http://localhost:8080/api/toys/{{ "{" }}id{{
+        "}"
+      }})
+    </li>
+  </ul>
+  <p>(this.component.ts)</p>
+  <img src="../../../assets/images/params-ts.png" alt="code" />
+  <p>(this.component.html)</p>
+  <img src="../../../assets/images/params-html.png" alt="code" />
+  <p>(heading-to.component.ts)</p>
+  <img src="../../../assets/images/params-child-ts.png" alt="code" />
+  <p>(heading-to.component.html)</p>
+  <img src="../../../assets/images/params-child-html.png" alt="code" />
+  <p>(app-routing.module.ts)</p>
+  <img src="../../../assets/images/params-routing.png" alt="code" />
+</div>
