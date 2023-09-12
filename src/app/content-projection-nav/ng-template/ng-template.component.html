@@ -1,0 +1,34 @@
+<app-content-projection-nav></app-content-projection-nav>
+<div class="container">
+  <div class="logic">
+    <div class="true" *ngIf="myBool; else tag">Boolean is true!</div>
+    <ng-template #tag>
+      <div class="false">Now it is false!</div>
+    </ng-template>
+    <button (click)="myBool = !myBool">Currently: {{ myBool }}</button>
+  </div>
+  <h3>ng-template is a placeholder for conditionally rendering HTML</h3>
+  <ul>
+    <li>
+      Unless ng-template is conditionally rendered, content inside will not be
+      displayed
+    </li>
+    <li>*ngIf cannot be used directly on ng-template tag</li>
+    <ul>
+      <li>
+        behind the scenes, ng-template generates an *ngIf, <br />
+        so this would violate Angular's 'no more than one structural directive
+        per tag' rule
+      </li>
+    </ul>
+    <li>However, [ngIf]="expression" CAN be used on ng-template</li>
+    <li>
+      Notice in this example, we place a tag on the ng-template to render the
+      HTML <br />
+      inside of it when the else condition is called within the *ngIf of the
+      first div
+    </li>
+  </ul>
+  <img src="../../../assets/images/ng-template-ts.png" alt="code" />
+  <img src="../../../assets/images/ng-template-html.png" alt="code" />
+</div>

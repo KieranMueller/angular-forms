@@ -71,6 +71,8 @@ import { GraphQLModule } from './graphql.module';
 import { ContentProjectionNavComponent } from './content-projection-nav/content-projection-nav.component';
 import { NgContentParentComponent } from './content-projection-nav/ng-content/ng-content-parent/ng-content-parent.component';
 import { NgContentChildComponent } from './content-projection-nav/ng-content/ng-content-child/ng-content-child.component';
+import { NgTemplateComponent } from './content-projection-nav/ng-template/ng-template.component';
+import { NgContainerComponent } from './content-projection-nav/ng-container/ng-container.component';
 
 @NgModule({
   declarations: [
@@ -134,6 +136,8 @@ import { NgContentChildComponent } from './content-projection-nav/ng-content/ng-
     ContentProjectionNavComponent,
     NgContentParentComponent,
     NgContentChildComponent,
+    NgTemplateComponent,
+    NgContainerComponent,
   ],
   imports: [
     BrowserModule,

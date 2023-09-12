@@ -1,0 +1,35 @@
+<app-content-projection-nav></app-content-projection-nav>
+<div class="container">
+  <div class="logic">
+    <div *ngFor="let number of numbers">
+      <ng-container *ngIf="number % 2 === 0">{{ number }}</ng-container>
+    </div>
+  </div>
+  <h3>
+    ng-container allows us to create a section in <br />
+    the template without introducing a new HTML element
+  </h3>
+  <ul>
+    <li>
+      You might think, "why not just render number inside the div tag <br />
+      using interpolation, we still wouldn't be introducing a new HTML element
+    </li>
+    <ul>
+      <li>
+        You would be unable to conditionally render content, since HTML tags
+        <br />
+        can only hold ONE structrual directive
+      </li>
+    </ul>
+    <li>You could still render each number using a span or p tag</li>
+    <li>
+      Apart from not introducing a new HTML tag to the DOM, this is handy in
+      <br />
+      case you have a global style applied to the tag you'd like to use, that
+      <br />
+      you do not want applied to these elements
+    </li>
+  </ul>
+  <img src="../../../assets/images/ng-container-ts.png" alt="code" />
+  <img src="../../../assets/images/ng-container-html.png" alt="code" />
+</div>

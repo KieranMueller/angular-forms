@@ -1,0 +1,15 @@
+.container {
+  margin-left: 30px;
+}
+
+.logic {
+  border: 1px solid gray;
+  padding: 30px;
+  border-radius: 20px;
+  width: max-content;
+}
+
+img {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
