@@ -1,0 +1,20 @@
+<app-di-nav></app-di-nav>
+<div class="container">
+  <div class="inner">
+    <p>{{ data | json }}</p>
+  </div>
+  <h3>here, we are injecting an instance of HttpClient</h3>
+  <ul>
+    <li>
+      don't get startled by the code within ngOnInit, this is another topic
+      entirely, <a routerLink="/subscribe" target="_blank">observables</a>
+    </li>
+    <li>the focus of this page, is simply one line, the constructor</li>
+    <li>
+      behind the scenes, Angular creates a field for our variable 'http', which
+      is of type HttpClient
+    </li>
+  </ul>
+  <img src="../../../assets/images/constructor-ts.png" alt="code" />
+  <img src="../../../assets/images/constructor-html.png" alt="code" />
+</div>

@@ -75,6 +75,8 @@ import { NgTemplateComponent } from './content-projection-nav/ng-template/ng-tem
 import { NgContainerComponent } from './content-projection-nav/ng-container/ng-container.component';
 import { RouteParamsComponent } from './routingnav/route-params/route-params.component';
 import { TestParamComponent } from './routingnav/test-param/test-param.component';
+import { DiNavComponent } from './di-nav/di-nav.component';
+import { ConstructorInjectionComponent } from './di-nav/constructor-injection/constructor-injection.component';
 
 @NgModule({
   declarations: [
@@ -142,6 +144,8 @@ import { TestParamComponent } from './routingnav/test-param/test-param.component
     NgContainerComponent,
     RouteParamsComponent,
     TestParamComponent,
+    DiNavComponent,
+    ConstructorInjectionComponent,
   ],
   imports: [
     BrowserModule,

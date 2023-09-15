@@ -42,6 +42,7 @@ import { NgTemplateComponent } from './content-projection-nav/ng-template/ng-tem
 import { NgContainerComponent } from './content-projection-nav/ng-container/ng-container.component';
 import { RouteParamsComponent } from './routingnav/route-params/route-params.component';
 import { TestParamComponent } from './routingnav/test-param/test-param.component';
+import { ConstructorInjectionComponent } from './di-nav/constructor-injection/constructor-injection.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -197,6 +198,10 @@ const routes: Routes = [
   {
     path: 'test-param/:id',
     component: TestParamComponent,
+  },
+  {
+    path: 'constructor-injection',
+    component: ConstructorInjectionComponent,
   },
   {
     path: '**',
