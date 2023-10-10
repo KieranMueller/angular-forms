@@ -1,0 +1,18 @@
+<app-httpclient></app-httpclient>
+<div class="container">
+  <div class="logic">
+    <label for="num">Search for to-do list item (1-200)</label>
+    <input
+      type="number"
+      id="num"
+      [(ngModel)]="num"
+      (keyup.enter)="search()"
+      (keyup)="complete = false"
+    />
+    <button [disabled]="!num" (click)="search()">Search</button>
+    <p>GET Request Successful: {{ complete }}</p>
+    <p>{{ data | json }}</p>
+  </div>
+  <img src="../../../assets/images/get-ts.png" alt="code" />
+  <img src="../../../assets/images/get-html.png" alt="code" />
+</div>

@@ -77,6 +77,8 @@ import { RouteParamsComponent } from './routingnav/route-params/route-params.com
 import { TestParamComponent } from './routingnav/test-param/test-param.component';
 import { DiNavComponent } from './di-nav/di-nav.component';
 import { ConstructorInjectionComponent } from './di-nav/constructor-injection/constructor-injection.component';
+import { HttpclientComponent } from './httpclient/httpclient.component';
+import { GetComponent } from './httpclient/get/get.component';
 
 @NgModule({
   declarations: [
@@ -146,6 +148,8 @@ import { ConstructorInjectionComponent } from './di-nav/constructor-injection/co
     TestParamComponent,
     DiNavComponent,
     ConstructorInjectionComponent,
+    HttpclientComponent,
+    GetComponent,
   ],
   imports: [
     BrowserModule,

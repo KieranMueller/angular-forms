@@ -43,6 +43,7 @@ import { NgContainerComponent } from './content-projection-nav/ng-container/ng-c
 import { RouteParamsComponent } from './routingnav/route-params/route-params.component';
 import { TestParamComponent } from './routingnav/test-param/test-param.component';
 import { ConstructorInjectionComponent } from './di-nav/constructor-injection/constructor-injection.component';
+import { GetComponent } from './httpclient/get/get.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -202,6 +203,10 @@ const routes: Routes = [
   {
     path: 'constructor-injection',
     component: ConstructorInjectionComponent,
+  },
+  {
+    path: 'http-get',
+    component: GetComponent,
   },
   {
     path: '**',
