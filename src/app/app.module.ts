@@ -79,6 +79,7 @@ import { DiNavComponent } from './di-nav/di-nav.component';
 import { ConstructorInjectionComponent } from './di-nav/constructor-injection/constructor-injection.component';
 import { HttpclientComponent } from './httpclient/httpclient.component';
 import { GetComponent } from './httpclient/get/get.component';
+import { PostComponent } from './httpclient/post/post.component';
 
 @NgModule({
   declarations: [
@@ -150,6 +151,7 @@ import { GetComponent } from './httpclient/get/get.component';
     ConstructorInjectionComponent,
     HttpclientComponent,
     GetComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,

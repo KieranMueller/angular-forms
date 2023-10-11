@@ -44,6 +44,7 @@ import { RouteParamsComponent } from './routingnav/route-params/route-params.com
 import { TestParamComponent } from './routingnav/test-param/test-param.component';
 import { ConstructorInjectionComponent } from './di-nav/constructor-injection/constructor-injection.component';
 import { GetComponent } from './httpclient/get/get.component';
+import { PostComponent } from './httpclient/post/post.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -207,6 +208,10 @@ const routes: Routes = [
   {
     path: 'http-get',
     component: GetComponent,
+  },
+  {
+    path: 'http-post',
+    component: PostComponent,
   },
   {
     path: '**',
