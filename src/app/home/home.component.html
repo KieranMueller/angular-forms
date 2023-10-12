@@ -6,6 +6,17 @@
       alt="angular-logo"
     />
     <h2>Kieran's Angular Toolbox</h2>
+    <div *ngIf="!hasName" class="newbie">
+      <h3>New here? Enter your name or nickname!</h3>
+      <div class="info">
+        <input type="text" placeholder="ultimate_koder281" [(ngModel)]="name" />
+        <button [disabled]="!name" (click)="setName()">Enter</button>
+      </div>
+    </div>
+    <div class="returner" *ngIf="hasName">
+      <h3>Welcome Back {{ name }}!</h3>
+      <button (click)="editName()">Edit Nickname</button>
+    </div>
     <p class="greeting">
       a friendly website designed to provide developers with simple examples of
       key Angular concepts

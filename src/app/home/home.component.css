@@ -21,6 +21,31 @@
   width: 100px;
 }
 
+.newbie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  display: flex;
+}
+
+.returner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.returner h3 {
+  margin-right: 10px;
+}
+
+.returner button {
+  margin-left: 10px;
+}
+
 .sidebar {
   width: 80vw;
   margin: 10px;
