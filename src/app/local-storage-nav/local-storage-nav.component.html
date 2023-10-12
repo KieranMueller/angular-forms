@@ -1,0 +1,12 @@
+<div class="container">
+  <button routerLink="">Back to Home</button>
+  <button [routerLink]="['/local-storage/set']" routerLinkActive="active">
+    Saving data
+  </button>
+  <button [routerLink]="['/local-storage/get']" routerLinkActive="active">
+    Retrieving data
+  </button>
+  <button [routerLink]="['/local-storage/remove']" routerLinkActive="active">
+    Removing Data
+  </button>
+</div>

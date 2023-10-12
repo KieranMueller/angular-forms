@@ -1,0 +1,49 @@
+<app-local-storage-nav></app-local-storage-nav>
+<div class="container">
+  <div class="logic">
+    <h3>Your Data</h3>
+    <p *ngIf="name">name: {{ name }}</p>
+    <p *ngIf="age">age: {{ age }}</p>
+    <p *ngIf="hobbies.length > 0">hobbies: {{ hobbies }}</p>
+    <p *ngIf="pet.typeOfAnimal">type of pet: {{ pet.typeOfAnimal }}</p>
+    <p *ngIf="pet.petName">pet name: {{ pet.petName }}</p>
+  </div>
+  <h3>Not seeing data?</h3>
+  <ul>
+    <li>
+      Navigate to the 'Saving data' page at the top, fill out <br />the fields,
+      click 'Save in local storage' then return here
+    </li>
+  </ul>
+  <h3>What's going on here?</h3>
+  <ul>
+    <li>
+      On the 'Saving data' page, you entered information which <br />
+      we saved to local storage
+    </li>
+    <li>
+      When this component is created, within the ngOnInit() <br />
+      lifecycle hook, we are retrieving that data from local storage
+    </li>
+    <li>
+      Remember, local storage can only store strings, so we utilize <br />
+      JSON.parse() for our non-string variables
+    </li>
+    <li>
+      Notice we are doing a bit work to ensure that our variables <br />are
+      being set to truthy values, we do not want to assign a <br />
+      variable to a local storage call for a key that does not exist
+    </li>
+    <li>
+      I would advise against using the typescript exclamation mark
+      <br />(non-null operator), it can lead to unexpected behavior if <br />
+      you try to fetch keys from local storage that do not exist
+    </li>
+    <li>
+      This data can now be accessed anytime, at any place in the <br />
+      application, without the need for an HTTP request to a backend server
+    </li>
+  </ul>
+  <img src="../../../assets/images/localget1-ts.png" alt="code" />
+  <img src="../../../assets/images/localget1-html.png" alt="code" />
+</div>

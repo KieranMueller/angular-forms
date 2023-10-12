@@ -45,6 +45,9 @@ import { TestParamComponent } from './routingnav/test-param/test-param.component
 import { ConstructorInjectionComponent } from './di-nav/constructor-injection/constructor-injection.component';
 import { GetComponent } from './httpclient/get/get.component';
 import { PostComponent } from './httpclient/post/post.component';
+import { LocalSetComponent } from './local-storage-nav/local-set/local-set.component';
+import { LocalGetComponent } from './local-storage-nav/local-get/local-get.component';
+import { LocalDeleteComponent } from './local-storage-nav/local-delete/local-delete.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -212,6 +215,14 @@ const routes: Routes = [
   {
     path: 'http-post',
     component: PostComponent,
+  },
+  {
+    path: 'local-storage',
+    children: [
+      { path: 'set', component: LocalSetComponent },
+      { path: 'get', component: LocalGetComponent },
+      { path: 'remove', component: LocalDeleteComponent },
+    ],
   },
   {
     path: '**',

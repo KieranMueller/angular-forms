@@ -80,6 +80,10 @@ import { ConstructorInjectionComponent } from './di-nav/constructor-injection/co
 import { HttpclientComponent } from './httpclient/httpclient.component';
 import { GetComponent } from './httpclient/get/get.component';
 import { PostComponent } from './httpclient/post/post.component';
+import { LocalStorageNavComponent } from './local-storage-nav/local-storage-nav.component';
+import { LocalSetComponent } from './local-storage-nav/local-set/local-set.component';
+import { LocalGetComponent } from './local-storage-nav/local-get/local-get.component';
+import { LocalDeleteComponent } from './local-storage-nav/local-delete/local-delete.component';
 
 @NgModule({
   declarations: [
@@ -152,6 +156,10 @@ import { PostComponent } from './httpclient/post/post.component';
     HttpclientComponent,
     GetComponent,
     PostComponent,
+    LocalStorageNavComponent,
+    LocalSetComponent,
+    LocalGetComponent,
+    LocalDeleteComponent,
   ],
   imports: [
     BrowserModule,

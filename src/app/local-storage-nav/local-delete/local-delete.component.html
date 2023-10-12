@@ -1,0 +1,33 @@
+<app-local-storage-nav></app-local-storage-nav>
+<div class="container">
+  <div class="logic">
+    <button [disabled]="!myDataExists" (click)="removeMyData()">
+      Remove My Data
+    </button>
+    <button [disabled]="!petDataExists" (click)="removePetData()">
+      Remove Pet's Data
+    </button>
+  </div>
+  <h3>What's going on here?</h3>
+  <ul>
+    <li>
+      If the buttons are disabled, you first need to visit the 'Saving data'
+      <br />
+      section and enter data to store in local storage
+    </li>
+    <li>
+      The bulk of logic in the ngOnInit() function can be ignored, it is <br />
+      irrelevent, simply for the sake of enabling or disabling the buttons
+    </li>
+    <li>
+      We have two buttons, one removes your data, one removes your pet's data
+    </li>
+    <li>
+      localStorage.removeItem() takes one argument, the key you'd like to <br />
+      delete, if it exists, it removes the keypair entirely <br />
+      (both key and value), if it does not exist, well nothing happens!
+    </li>
+  </ul>
+  <img src="../../../assets/images/localdelete-ts.png" alt="code" />
+  <img src="../../../assets/images/localdelete-html.png" alt="code" />
+</div>

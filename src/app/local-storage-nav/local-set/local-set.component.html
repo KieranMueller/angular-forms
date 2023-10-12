@@ -1,0 +1,63 @@
+<app-local-storage-nav></app-local-storage-nav>
+<div class="container">
+  <div class="logic">
+    <p>Enter your info</p>
+    <input type="text" placeholder="name" [(ngModel)]="name" />
+    <input type="number" placeholder="age" [(ngModel)]="age" />
+    <input
+      type="text"
+      placeholder="hobbies (comma separated)"
+      [(ngModel)]="hobbies"
+    />
+    <p>Enter your pet's data below</p>
+    <input
+      type="text"
+      placeholder="type of animal"
+      [(ngModel)]="myPet.typeOfAnimal"
+    />
+    <input type="text" placeholder="name" [(ngModel)]="myPet.petName" />
+    <button
+      [disabled]="
+        !name || !age || !hobbies || !myPet.typeOfAnimal || !myPet.petName
+      "
+      (click)="save()"
+    >
+      Save in local storage
+    </button>
+  </div>
+  <h3>Why use local storage?</h3>
+  <p>
+    Local storage can make your application quicker, and more efficient. Instead
+    of <br />
+    server side storage, fetching data from a database, we can make use of
+    <br />client side storage and store data in the client's web browser. It can
+    allow you <br />
+    to cut down on unnecessary HTTP requests, possibly storing a large amount
+    <br />
+    of data from an initial HTTP GET request when a user enters the site, and
+    <br />
+    fetching/using the data stored in local storage for the duration of the
+    user's visit. <br />
+    Be cautious storing sensitive information, as the key value pairs saved in
+    <br />
+    local storage are easily accessible through the developer console on your
+    machine.
+  </p>
+  <h3>After entering data and hitting the save button...</h3>
+  <ul>
+    <li>Open the developer console (Ctrl + Shift + i)</li>
+    <li>In the top bar, navigate to 'Application'</li>
+    <li>
+      On the left hand side, within the 'Storage' section, expand 'Local
+      Storage'
+    </li>
+    <li>View the key value pairs that you just stored</li>
+    <li>
+      Click the 'Retrieving data' section in the navigation bar to learn how to
+      retrieve this data!
+    </li>
+  </ul>
+  <img src="../../../assets/images/local-ts.png" alt="code" />
+  <img src="../../../assets/images/local-html.png" alt="code" />
+  <img src="../../../assets/images/local-console.png" alt="code" />
+</div>
