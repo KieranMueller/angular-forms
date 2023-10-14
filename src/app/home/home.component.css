@@ -76,6 +76,20 @@
   border: 1px solid rgba(245, 245, 245, 0.07);
 }
 
+.highlight {
+  background-color: rgb(64, 182, 255) !important;
+  color: rgb(0, 0, 0) !important;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.539);
+  font-weight: bold;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  50% {
+    scale: 1.05;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .sidebar button:hover {
     background: rgba(213, 57, 57, 0.725);

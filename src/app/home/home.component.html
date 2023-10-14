@@ -1,3 +1,11 @@
+<div class="searchbar">
+  <input
+    type="text"
+    placeholder="Search Keyword"
+    [(ngModel)]="search"
+    (keyup)="handleSearch()"
+  />
+</div>
 <div class="container">
   <div class="content">
     <img
@@ -23,28 +31,103 @@
     </p>
   </div>
   <div class="sidebar">
-    <button routerLink="spinner">Angular Material</button>
-    <button routerLink="graphql">Apollo (GraphQL)</button>
-    <button routerLink="styling">Attribute Directives</button>
-    <button routerLink="authguard">AuthGuard + CanActivateFn</button>
-    <button routerLink="axios">Axios (not Angular)</button>
-    <button routerLink="behavior-subject">Behavior Subject</button>
-    <button routerLink="ng-content">Content Projection</button>
-    <button routerLink="constructor-injection">Dependency Injection</button>
-    <button routerLink="template-driven-form">Forms</button>
-    <button routerLink="http-get">Http Client</button>
-    <button routerLink="input">Input</button>
-    <button routerLink="input-mask">Input Masking</button>
-    <button routerLink="local-storage/set">Local Storage</button>
-    <button routerLink="subscribe">Observables</button>
-    <button routerLink="output">Output + Event Emitters</button>
-    <button routerLink="async-pipe">Pipes</button>
-    <button routerLink="routerlink">Routing</button>
-    <button routerLink="of-pipe-map">RxJS</button>
-    <button routerLink="ng-for">Structural Directives</button>
-    <button routerLink="view-child">View Child</button>
+    <button [ngClass]="{ highlight: searched.material }" routerLink="spinner">
+      Angular Material
+    </button>
+    <button [ngClass]="{ highlight: searched.apollo }" routerLink="graphql">
+      Apollo (GraphQL)
+    </button>
+    <button
+      [ngClass]="{ highlight: searched.attDirectives }"
+      routerLink="styling"
+    >
+      Attribute Directives
+    </button>
+    <button [ngClass]="{ highlight: searched.guard }" routerLink="authguard">
+      AuthGuard + CanActivateFn
+    </button>
+    <button [ngClass]="{ highlight: searched.axios }" routerLink="axios">
+      Axios (not Angular)
+    </button>
+    <button
+      [ngClass]="{ highlight: searched.behaviorSubject }"
+      routerLink="behavior-subject"
+    >
+      Behavior Subject
+    </button>
+    <button
+      [ngClass]="{ highlight: searched.contentProj }"
+      routerLink="ng-content"
+    >
+      Content Projection
+    </button>
+    <button
+      [ngClass]="{ highlight: searched.dependencyInjection }"
+      routerLink="constructor-injection"
+    >
+      Dependency Injection
+    </button>
+    <button
+      [ngClass]="{ highlight: searched.forms }"
+      routerLink="template-driven-form"
+    >
+      Forms
+    </button>
+    <button
+      [ngClass]="{ highlight: searched.httpClient }"
+      routerLink="http-get"
+    >
+      Http Client
+    </button>
+    <button [ngClass]="{ highlight: searched.input }" routerLink="input">
+      Input
+    </button>
+    <button
+      [ngClass]="{ highlight: searched.inputMask }"
+      routerLink="input-mask"
+    >
+      Input Masking
+    </button>
+    <button
+      [ngClass]="{ highlight: searched.localStorage }"
+      routerLink="local-storage/set"
+    >
+      Local Storage
+    </button>
+    <button
+      [ngClass]="{ highlight: searched.observables }"
+      routerLink="subscribe"
+    >
+      Observables
+    </button>
+    <button [ngClass]="{ highlight: searched.output }" routerLink="output">
+      Output + Event Emitters
+    </button>
+    <button [ngClass]="{ highlight: searched.pipes }" routerLink="async-pipe">
+      Pipes
+    </button>
+    <button [ngClass]="{ highlight: searched.routing }" routerLink="routerlink">
+      Routing
+    </button>
+    <button [ngClass]="{ highlight: searched.rxjs }" routerLink="of-pipe-map">
+      RxJS
+    </button>
+    <button
+      [ngClass]="{ highlight: searched.structDirectives }"
+      routerLink="ng-for"
+    >
+      Structural Directives
+    </button>
+    <button
+      [ngClass]="{ highlight: searched.viewChild }"
+      routerLink="view-child"
+    >
+      View Child
+    </button>
+    <button class="inactive">Angular CLI</button>
     <button class="inactive">Components + Services</button>
     <button class="inactive">Resolve Guard</button>
+    <button class="inactive">Search Filter</button>
     <button class="inactive" routerLink="basic-unit-test" disabled>
       Unit Testing
     </button>
