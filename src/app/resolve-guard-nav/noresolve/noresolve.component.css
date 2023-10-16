@@ -1,0 +1,11 @@
+.container {
+  margin-left: 30px;
+}
+
+.logic {
+  border: 1px solid gray;
+  padding: 30px;
+  width: 300px;
+  overflow-y: scroll;
+  max-height: 400px;
+}

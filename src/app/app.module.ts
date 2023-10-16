@@ -84,6 +84,9 @@ import { LocalStorageNavComponent } from './local-storage-nav/local-storage-nav.
 import { LocalSetComponent } from './local-storage-nav/local-set/local-set.component';
 import { LocalGetComponent } from './local-storage-nav/local-get/local-get.component';
 import { LocalDeleteComponent } from './local-storage-nav/local-delete/local-delete.component';
+import { ResolveGuardNavComponent } from './resolve-guard-nav/resolve-guard-nav.component';
+import { ResolveComponent } from './resolve-guard-nav/resolve/resolve.component';
+import { NoresolveComponent } from './resolve-guard-nav/noresolve/noresolve.component';
 
 @NgModule({
   declarations: [
@@ -160,6 +163,9 @@ import { LocalDeleteComponent } from './local-storage-nav/local-delete/local-del
     LocalSetComponent,
     LocalGetComponent,
     LocalDeleteComponent,
+    ResolveGuardNavComponent,
+    ResolveComponent,
+    NoresolveComponent,
   ],
   imports: [
     BrowserModule,

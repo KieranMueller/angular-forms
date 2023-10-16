@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
+  loading = false;
   hasName = false;
   name = '';
   search = '';
@@ -30,6 +31,7 @@ export class HomeComponent implements OnInit {
     rxjs: false,
     structDirectives: false,
     viewChild: false,
+    resolve: false,
   };
 
   ngOnInit() {
@@ -314,6 +316,17 @@ export class HomeComponent implements OnInit {
       'elementref',
       'nativeelement',
     ];
+    const resolveTags = [
+      'resolve',
+      'guard',
+      'loading',
+      'wait',
+      'page',
+      'service',
+      'canactivate',
+      'route',
+      'routing',
+    ];
     for (let term of materialTags) {
       if (term.startsWith(search) && search) {
         this.searched.material = true;
@@ -433,6 +446,12 @@ export class HomeComponent implements OnInit {
         this.searched.viewChild = true;
         break;
       } else this.searched.viewChild = false;
+    }
+    for (let term of resolveTags) {
+      if (term.startsWith(search) && search) {
+        this.searched.resolve = true;
+        break;
+      } else this.searched.resolve = false;
     }
   }
 }

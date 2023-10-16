@@ -48,6 +48,9 @@ import { PostComponent } from './httpclient/post/post.component';
 import { LocalSetComponent } from './local-storage-nav/local-set/local-set.component';
 import { LocalGetComponent } from './local-storage-nav/local-get/local-get.component';
 import { LocalDeleteComponent } from './local-storage-nav/local-delete/local-delete.component';
+import { ResolveComponent } from './resolve-guard-nav/resolve/resolve.component';
+import { ResolveGuard } from './resolve-guard-nav/resolve/resolve.guard';
+import { NoresolveComponent } from './resolve-guard-nav/noresolve/noresolve.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -223,6 +226,17 @@ const routes: Routes = [
       { path: 'get', component: LocalGetComponent },
       { path: 'remove', component: LocalDeleteComponent },
     ],
+  },
+  {
+    path: 'resolve',
+    component: ResolveComponent,
+    resolve: {
+      data: ResolveGuard,
+    },
+  },
+  {
+    path: 'no-resolve',
+    component: NoresolveComponent,
   },
   {
     path: '**',

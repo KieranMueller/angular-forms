@@ -1,0 +1,21 @@
+<div *ngIf="loading" class="loading-backdrop">
+  <mat-progress-spinner
+    [diameter]="40"
+    color="warn"
+    mode="indeterminate"
+    strokeWidth="3"
+  ></mat-progress-spinner>
+</div>
+<div class="container">
+  <button routerLink="">Back to Home</button>
+  <button
+    routerLink="/resolve"
+    routerLinkActive="active"
+    (click)="loading = true"
+  >
+    Resolve
+  </button>
+  <button routerLink="/no-resolve" routerLinkActive="active">
+    Without resolve
+  </button>
+</div>

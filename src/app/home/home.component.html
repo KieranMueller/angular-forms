@@ -1,3 +1,11 @@
+<div *ngIf="loading" class="loading-backdrop">
+  <mat-progress-spinner
+    [diameter]="40"
+    color="warn"
+    mode="indeterminate"
+    strokeWidth="3"
+  ></mat-progress-spinner>
+</div>
 <div class="searchbar">
   <input
     type="text"
@@ -106,6 +114,13 @@
     <button [ngClass]="{ highlight: searched.pipes }" routerLink="async-pipe">
       Pipes
     </button>
+    <button
+      [ngClass]="{ highlight: searched.resolve }"
+      routerLink="resolve"
+      (click)="loading = true"
+    >
+      Resolve Guard
+    </button>
     <button [ngClass]="{ highlight: searched.routing }" routerLink="routerlink">
       Routing
     </button>
@@ -126,7 +141,6 @@
     </button>
     <button class="inactive">Angular CLI</button>
     <button class="inactive">Components + Services</button>
-    <button class="inactive">Resolve Guard</button>
     <button class="inactive">Search Filter</button>
     <button class="inactive" routerLink="basic-unit-test" disabled>
       Unit Testing
