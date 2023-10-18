@@ -3,4 +3,37 @@
   <div class="logic">
     <p>{{ data | json }}</p>
   </div>
+  <h3>What's going on here?</h3>
+  <ul class="description">
+    <li>
+      First, check out the resolve tab above that explains how resolve guard
+      works
+    </li>
+    <li>
+      Here, we are using a service to return an HTTP GET request and render the
+      data returned in the template
+    </li>
+    <h4>no-resolve.service.ts</h4>
+    <img src="../../../assets/images/noresolveservice.png" alt="code" />
+    <li>
+      This service has one method, getStuff(), that returns an observable from
+      an HTTP GET request
+    </li>
+    <li>
+      I am using rxjs's delay method to mock a large payload that takes 2
+      seconds to receive
+    </li>
+    <li>
+      In our component's typescript file, we use the constructor to inject this
+      service, and in ngOnInit(), we set a variable to what is returned from the
+      getStuff() method in the service
+    </li>
+    <h4>noresolve.component.ts + noresolve.component.html</h4>
+    <img src="../../../assets/images/noresolve-ts.png" alt="code" />
+    <img src="../../../assets/images/noresolve-html.png" alt="code" />
+    <li>
+      Notice that we are able to land on this page before data has been rendered
+      leading to poor user experience
+    </li>
+  </ul>
 </div>

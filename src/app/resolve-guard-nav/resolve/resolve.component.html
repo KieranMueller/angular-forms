@@ -2,10 +2,94 @@
 <div class="container">
   <div class="logic">
     <h3>Data we waited to receive</h3>
-    <p class="data">{{ data | json }}</p>
+    <p class="data">{{ dataToDisplay | json }}</p>
   </div>
   <h3>What's going on here?</h3>
   <ul>
     <li>Did you notice it took a couple of seconds to load this page?</li>
+    <li>The resolve guard ensures that a page is not loaded before its data</li>
+  </ul>
+  <h3>Steps</h3>
+  <ul class="description">
+    <h4>Creating our resolve guard (resolve.guard.ts)</h4>
+    <ul>
+      <li>
+        Here, we first generate a guard (or service) called resolve, you can
+        name it whatever you'd like
+      </li>
+      <li>We then implement the 'Resolve' interface</li>
+      <li>We then must implement the Resolve interface's method 'resolve()'</li>
+      <li>
+        We would typically inject another service, that handles our HTTP
+        requests in the constructor. For simplicity, here we are simply
+        completing the HTTP request within the resolve() method directly
+      </li>
+      <li>
+        To mimic a large payload of data that we must wait to receive, I am
+        using rxjs's delay method to withhold execution for 2 seconds (2000ms)
+      </li>
+    </ul>
+    <img src="../../../assets/images/resolve.guard.ts.png" alt="code" />
+    <h4>Creating our view component (resolve.component.ts)</h4>
+    <ul>
+      <li>
+        Next, we need to create our component that will be using this data to
+        display in the UI
+      </li>
+      <li>
+        Roughly set the component up, we will need to return to add more after
+        modifying our app-routing.module.ts
+      </li>
+    </ul>
+    <img src="../../../assets/images/resolve-ts.png" alt="code" />
+    <img src="../../../assets/images/resolve-html.png" alt="code" />
+    <h4>Modifying our app-routing.module.ts</h4>
+    <ul>
+      <li>Head to the app-routing.module.ts file</li>
+      <li>Add a path to the view component you just created</li>
+      <li>
+        Add the key 'resolve' with a value that is an object containing a key
+        (here we call it 'data' but you may call it whatever you'd like), and a
+        value of the guard or service that implements the Resolve interface
+        (here we are using the ResolveGuard that we created in the first step)
+      </li>
+      <li>
+        This variable, 'data', will hold what is returned by the resolve()
+        method in our ResolveGuard, in this case, we are returning an observable
+        with our http request
+      </li>
+    </ul>
+    <img src="../../../assets/images/resolve-route.png" alt="code" />
+    <h4>
+      Heading back to our view component (resolve.component.ts +
+      resolve.component.html)
+    </h4>
+    <ul>
+      <li>
+        Back in our resolve component, we want to use/render this data in the
+        template
+      </li>
+      <li>
+        We first use the constructor to inject the ActivatedRoute, this is how
+        we will access that variable 'data' from the routing module
+      </li>
+      <li>
+        Remember that this variable 'data' holds an observable from the http
+        request returned in the resolve() method of our ResolveGuard
+      </li>
+      <li>
+        We set our variable to display in the template equal to the
+        activatedRoute.data
+      </li>
+      <li>
+        Since we are working with json, we use the json pipe in our template
+      </li>
+      <li>
+        All finished! Now play around with implementing a loading spinner or
+        progress bar to improve user experience!
+      </li>
+    </ul>
+    <img src="../../../assets/images/resolve-ts1.png" alt="code" />
+    <img src="../../../assets/images/resolve-html1.png" alt="code" />
   </ul>
 </div>

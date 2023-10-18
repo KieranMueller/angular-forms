@@ -9,3 +9,13 @@
   overflow-y: scroll;
   max-height: 400px;
 }
+
+.description {
+  max-width: 500px;
+}
+
+img {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}

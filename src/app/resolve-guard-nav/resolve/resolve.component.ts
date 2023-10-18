@@ -7,11 +7,11 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./resolve.component.css'],
 })
 export class ResolveComponent implements OnInit {
-  data: any;
+  dataToDisplay: any;
 
   constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit() {
-    this.data = this.activatedRoute.data;
+    this.dataToDisplay = this.activatedRoute.data;
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ResolveGuard } from '../resolve/resolve.guard';
+import { NoResolveService } from './no-resolve.service';
 
 @Component({
   selector: 'app-noresolve',
@@ -9,9 +9,9 @@ import { ResolveGuard } from '../resolve/resolve.guard';
 export class NoresolveComponent implements OnInit {
   data: any = 'waiting for response...';
 
-  constructor(private service: ResolveGuard) {}
+  constructor(private service: NoResolveService) {}
 
   ngOnInit() {
-    this.service.resolve().subscribe((res) => (this.data = res));
+    this.service.getStuff().subscribe((res) => (this.data = res));
   }
 }

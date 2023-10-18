@@ -14,3 +14,12 @@
   height: 400px;
   overflow-y: scroll;
 }
+
+.description {
+  max-width: 500px;
+}
+
+img {
+  margin-right: 10px;
+  margin-top: 10px;
+}
