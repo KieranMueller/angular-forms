@@ -7,17 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   loading = false;
+  theme = 'dark';
   hasName = false;
   name = '';
   search = '';
-  searched = {
+  searched: any = {
+    cli: false,
     material: false,
     apollo: false,
     attDirectives: false,
     guard: false,
     axios: false,
-    contentProj: false,
     behaviorSubject: false,
+    contentProj: false,
     dependencyInjection: false,
     forms: false,
     httpClient: false,
@@ -33,27 +35,25 @@ export class HomeComponent implements OnInit {
     viewChild: false,
     resolve: false,
   };
-
-  ngOnInit() {
-    const name = localStorage.getItem('nickname');
-    if (name) {
-      this.name = name;
-      this.hasName = true;
-    }
-  }
-
-  setName() {
-    this.hasName = true;
-    localStorage.setItem('nickname', this.name);
-  }
-
-  editName() {
-    this.hasName = false;
-  }
-
-  handleSearch() {
-    const search = this.search.toLowerCase();
-    const materialTags = [
+  tags: any = {
+    cli: [
+      'cli',
+      'cmd',
+      'command line interface',
+      'interface',
+      'terminal',
+      'prompt',
+      'powershell',
+      'bash',
+      'ubuntu',
+      'linux',
+      'windows',
+      'ng',
+      'angular',
+      'install',
+      'generate',
+    ],
+    material: [
       'material',
       'angular material',
       'materials',
@@ -66,8 +66,8 @@ export class HomeComponent implements OnInit {
       'suggestion',
       'auto',
       'autocomplete',
-    ];
-    const apolloTags = [
+    ],
+    apollo: [
       'apollo',
       'graph',
       'graphy',
@@ -85,8 +85,8 @@ export class HomeComponent implements OnInit {
       'cache',
       'createapollo',
       'graphqlmodule',
-    ];
-    const attDirectivesTags = [
+    ],
+    attDirectives: [
       'attribute',
       'directive',
       'directives',
@@ -107,8 +107,8 @@ export class HomeComponent implements OnInit {
       'ngstyle',
       'ngstyles',
       'ng-style',
-    ];
-    const guardTags = [
+    ],
+    guard: [
       'authguard',
       'auth-guard',
       'canactivatefn',
@@ -132,8 +132,8 @@ export class HomeComponent implements OnInit {
       'security',
       'secure',
       'enable',
-    ];
-    const axiosTags = [
+    ],
+    axios: [
       'axios',
       'request',
       'response',
@@ -145,8 +145,8 @@ export class HomeComponent implements OnInit {
       'delete',
       'crud',
       'headers',
-    ];
-    const behaviorSubjectTags = [
+    ],
+    behaviorSubject: [
       'behavior',
       'subject',
       'service',
@@ -155,8 +155,8 @@ export class HomeComponent implements OnInit {
       'service',
       'injection',
       'behaviorsubject',
-    ];
-    const contentProjTags = [
+    ],
+    contentProj: [
       'content',
       'projection',
       'ngcontent',
@@ -171,8 +171,8 @@ export class HomeComponent implements OnInit {
       'child',
       'render',
       'html',
-    ];
-    const dependencyInjectionTags = [
+    ],
+    dependencyInjection: [
       'dependency',
       'injection',
       'dependency injection',
@@ -180,8 +180,8 @@ export class HomeComponent implements OnInit {
       'private',
       'property',
       'fields',
-    ];
-    const formsTags = [
+    ],
+    forms: [
       'forms',
       'template driven',
       'reactive driven',
@@ -190,8 +190,8 @@ export class HomeComponent implements OnInit {
       'controls',
       'form control',
       'validators',
-    ];
-    const httpClientTags = [
+    ],
+    httpClient: [
       'request',
       'response',
       'httpclient',
@@ -207,8 +207,8 @@ export class HomeComponent implements OnInit {
       'headers',
       'send',
       'recieve',
-    ];
-    const inputTags = [
+    ],
+    input: [
       'input()',
       '@input()',
       'parent',
@@ -218,16 +218,16 @@ export class HomeComponent implements OnInit {
       'components',
       'data',
       'sharing',
-    ];
-    const inputMaskTags = [
+    ],
+    inputMask: [
       'input masking',
       'masking',
       'ngx-mask@',
       '[mask]',
       'phone number',
       'fields',
-    ];
-    const localStorageTags = [
+    ],
+    localStorage: [
       'local storage',
       'storage',
       'localstorage.setitem()',
@@ -240,16 +240,16 @@ export class HomeComponent implements OnInit {
       'server',
       'stash',
       'cache',
-    ];
-    const observablesTags = [
+    ],
+    observables: [
       'observables',
       'subscribe',
       'next',
       'complete',
       'ondestroy',
       'subscription',
-    ];
-    const outputTags = [
+    ],
+    output: [
       'output',
       '@output()',
       'event emitter',
@@ -259,17 +259,9 @@ export class HomeComponent implements OnInit {
       'child',
       'sharing',
       'data',
-    ];
-    const pipesTags = [
-      'custom',
-      'pipes',
-      'async',
-      'json',
-      'dates',
-      'filter',
-      'html',
-    ];
-    const routingTags = [
+    ],
+    pipes: ['custom', 'pipes', 'async', 'json', 'dates', 'filter', 'html'],
+    routing: [
       'routes',
       'routingmodule',
       'routing.module',
@@ -278,8 +270,8 @@ export class HomeComponent implements OnInit {
       '404',
       'not found',
       'children',
-    ];
-    const rxjsTags = [
+    ],
+    rxjs: [
       'rxjs',
       'reactive',
       'javascript',
@@ -288,8 +280,8 @@ export class HomeComponent implements OnInit {
       'of',
       'pipe',
       'map',
-    ];
-    const structDirectivesTags = [
+    ],
+    structDirectives: [
       'structural directives',
       'directives',
       'ngif',
@@ -306,8 +298,8 @@ export class HomeComponent implements OnInit {
       'conditionally',
       'template',
       'html',
-    ];
-    const viewChildTags = [
+    ],
+    viewChild: [
       'viewchild',
       '@viewchild()',
       'child',
@@ -315,8 +307,8 @@ export class HomeComponent implements OnInit {
       'textref',
       'elementref',
       'nativeelement',
-    ];
-    const resolveTags = [
+    ],
+    resolve: [
       'resolve',
       'guard',
       'loading',
@@ -326,132 +318,43 @@ export class HomeComponent implements OnInit {
       'canactivate',
       'route',
       'routing',
-    ];
-    for (let term of materialTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.material = true;
-        break;
-      } else this.searched.material = false;
+    ],
+  };
+
+  ngOnInit() {
+    const name = localStorage.getItem('nickname');
+    if (name) {
+      this.name = name;
+      this.hasName = true;
     }
-    for (let term of apolloTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.apollo = true;
-        break;
-      } else this.searched.apollo = false;
-    }
-    for (let term of attDirectivesTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.attDirectives = true;
-        break;
-      } else this.searched.attDirectives = false;
-    }
-    for (let term of guardTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.guard = true;
-        break;
-      } else this.searched.guard = false;
-    }
-    for (let term of axiosTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.axios = true;
-        break;
-      } else this.searched.axios = false;
-    }
-    for (let term of behaviorSubjectTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.behaviorSubject = true;
-        break;
-      } else this.searched.behaviorSubject = false;
-    }
-    for (let term of contentProjTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.contentProj = true;
-        break;
-      } else this.searched.contentProj = false;
-    }
-    for (let term of dependencyInjectionTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.dependencyInjection = true;
-        break;
-      } else this.searched.dependencyInjection = false;
-    }
-    for (let term of formsTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.forms = true;
-        break;
-      } else this.searched.forms = false;
-    }
-    for (let term of httpClientTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.httpClient = true;
-        break;
-      } else this.searched.httpClient = false;
-    }
-    for (let term of inputTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.input = true;
-        break;
-      } else this.searched.input = false;
-    }
-    for (let term of inputMaskTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.inputMask = true;
-        break;
-      } else this.searched.inputMask = false;
-    }
-    for (let term of localStorageTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.localStorage = true;
-        break;
-      } else this.searched.localStorage = false;
-    }
-    for (let term of observablesTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.observables = true;
-        break;
-      } else this.searched.observables = false;
-    }
-    for (let term of outputTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.output = true;
-        break;
-      } else this.searched.output = false;
-    }
-    for (let term of pipesTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.pipes = true;
-        break;
-      } else this.searched.pipes = false;
-    }
-    for (let term of routingTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.routing = true;
-        break;
-      } else this.searched.routing = false;
-    }
-    for (let term of rxjsTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.rxjs = true;
-        break;
-      } else this.searched.rxjs = false;
-    }
-    for (let term of structDirectivesTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.structDirectives = true;
-        break;
-      } else this.searched.structDirectives = false;
-    }
-    for (let term of viewChildTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.viewChild = true;
-        break;
-      } else this.searched.viewChild = false;
-    }
-    for (let term of resolveTags) {
-      if (term.startsWith(search) && search) {
-        this.searched.resolve = true;
-        break;
-      } else this.searched.resolve = false;
-    }
+    const theme = localStorage.getItem('theme');
+    if (theme) this.theme = theme;
+  }
+
+  setName() {
+    this.hasName = true;
+    localStorage.setItem('nickname', this.name);
+  }
+
+  editName() {
+    this.hasName = false;
+  }
+
+  setTheme() {
+    if (this.theme === 'dark') this.theme = 'light';
+    else if (this.theme === 'light') this.theme = 'dark';
+    localStorage.setItem('theme', this.theme);
+  }
+
+  handleSearch() {
+    const search = this.search.toLocaleLowerCase().trim();
+    Object.keys(this.tags).forEach((tagArr) => {
+      for (let tag of this.tags[tagArr]) {
+        if (tag.startsWith(search) && search) {
+          this.searched[tagArr] = true;
+          return;
+        } else this.searched[tagArr] = false;
+      }
+    });
   }
 }

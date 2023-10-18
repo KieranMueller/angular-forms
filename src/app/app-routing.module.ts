@@ -51,6 +51,8 @@ import { LocalDeleteComponent } from './local-storage-nav/local-delete/local-del
 import { ResolveComponent } from './resolve-guard-nav/resolve/resolve.component';
 import { ResolveGuard } from './resolve-guard-nav/resolve/resolve.guard';
 import { NoresolveComponent } from './resolve-guard-nav/noresolve/noresolve.component';
+import { CliComponent } from './cli-nav/cli/cli.component';
+import { CliCommandsComponent } from './cli-nav/cli-commands/cli-commands.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -237,6 +239,14 @@ const routes: Routes = [
   {
     path: 'no-resolve',
     component: NoresolveComponent,
+  },
+  {
+    path: 'cli',
+    component: CliComponent,
+  },
+  {
+    path: 'commands',
+    component: CliCommandsComponent,
   },
   {
     path: '**',

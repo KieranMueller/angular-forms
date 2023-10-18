@@ -87,6 +87,9 @@ import { LocalDeleteComponent } from './local-storage-nav/local-delete/local-del
 import { ResolveGuardNavComponent } from './resolve-guard-nav/resolve-guard-nav.component';
 import { ResolveComponent } from './resolve-guard-nav/resolve/resolve.component';
 import { NoresolveComponent } from './resolve-guard-nav/noresolve/noresolve.component';
+import { CliNavComponent } from './cli-nav/cli-nav.component';
+import { CliComponent } from './cli-nav/cli/cli.component';
+import { CliCommandsComponent } from './cli-nav/cli-commands/cli-commands.component';
 
 @NgModule({
   declarations: [
@@ -166,6 +169,9 @@ import { NoresolveComponent } from './resolve-guard-nav/noresolve/noresolve.comp
     ResolveGuardNavComponent,
     ResolveComponent,
     NoresolveComponent,
+    CliNavComponent,
+    CliComponent,
+    CliCommandsComponent,
   ],
   imports: [
     BrowserModule,

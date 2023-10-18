@@ -13,6 +13,7 @@
     [(ngModel)]="search"
     (keyup)="handleSearch()"
   />
+  <!-- <button (click)="setTheme()">Toggle Theme: {{ theme }}</button> -->
 </div>
 <div class="container">
   <div class="content">
@@ -39,6 +40,9 @@
     </p>
   </div>
   <div class="sidebar">
+    <button [ngClass]="{ highlight: searched.cli }" routerLink="cli">
+      Angular CLI
+    </button>
     <button [ngClass]="{ highlight: searched.material }" routerLink="spinner">
       Angular Material
     </button>
@@ -139,7 +143,6 @@
     >
       View Child
     </button>
-    <button class="inactive">Angular CLI</button>
     <button class="inactive">Components + Services</button>
     <button class="inactive">Search Filter</button>
     <button class="inactive" routerLink="basic-unit-test" disabled>

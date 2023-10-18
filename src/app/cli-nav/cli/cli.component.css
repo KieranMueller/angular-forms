@@ -1,0 +1,20 @@
+.container {
+  margin-left: 30px;
+}
+
+.logic {
+  padding: 30px;
+  border: 1px solid gray;
+  border-radius: 20px;
+  width: max-content;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.copied {
+  background-color: rgba(0, 0, 255, 0.41);
+  transition: 0.5s;
+}

@@ -1,0 +1,40 @@
+<app-cli-nav></app-cli-nav>
+<div class="container">
+  <div [ngClass]="{ copied: copied }" class="logic" (click)="copy()">
+    <p>{{ copied ? "copied to clipboard!" : " click to copy to clipboard" }}</p>
+    <h3>{{ command }}</h3>
+  </div>
+  <h3>What is it?</h3>
+  <ul>
+    <li>
+      The Angular Command Line Interface (CLI) allows you to initialize,
+      develop, scaffold, and maintain Angular applications from a command shell
+    </li>
+    <li>Any Angular developer should be well rounded with Angular CLI</li>
+  </ul>
+  <h3>Steps</h3>
+  <ul>
+    <li>
+      You must have npm installed, which requires Node.js to be installed as
+      well
+    </li>
+    <ul>
+      <li>
+        If you are unsure whether or not npm is installed, open a command prompt
+        and run 'npm -v' or 'npm version'
+      </li>
+      <li>
+        If you need to install Node.js and npm, follow this link
+        <a href="https://nodejs.org/en/download" target="#blank">install</a>
+      </li>
+    </ul>
+    <li>
+      Once you have installed npm, copy and run the command above 'npm install
+      -g @angular/cli' to install Angular CLI
+    </li>
+    <li>
+      Once installed, run 'ng v' or 'ng version' to confirm installation and
+      view the current version
+    </li>
+  </ul>
+</div>

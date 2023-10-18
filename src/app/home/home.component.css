@@ -13,6 +13,9 @@
 .searchbar {
   margin-top: 10px;
   margin-left: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 20px;
 }
 
 .container {
