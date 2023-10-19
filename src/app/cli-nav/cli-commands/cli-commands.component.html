@@ -1,2 +1,88 @@
 <app-cli-nav></app-cli-nav>
-<p>cli-commands works!</p>
+<div class="container">
+  <h3>Getting started</h3>
+  <ul>
+    <li>
+      Make sure you are in your root project directory while running these
+      commands
+    </li>
+    <li>
+      If you don't have an Angular project, we will make use of one of our first
+      and most useful commands
+    </li>
+    <ul>
+      <li>
+        To generate a new project, navigate to the folder you'd like your
+        project in, and run 'ng new myProject' where 'myProject' is any name
+        you'd like to give your project
+      </li>
+      <li>
+        You will then be asked to add routing or not, if unsure whether to add
+        or not, enter 'no'
+      </li>
+      <li>
+        You will then be asked to enter your styling language. I would advise
+        SCSS.
+      </li>
+      <ul>
+        <li>
+          SCSS includes all of the features and functionality of vanilla CSS,
+          and more (almost like what Typescript is to Javascript)
+        </li>
+        <li>
+          SCSS offers nesting and variables. If you'd like to learn more, check
+          out this link
+          <a
+            href="https://medium.com/swlh/learn-the-scss-sass-basics-in-5-minutes-73002653b443"
+            >SCSS Basics</a
+          >
+        </li>
+      </ul>
+      <li>
+        After creating the project, use the cd command to navigate to the root
+        project directory
+      </li>
+      <li>
+        (Shortcut) if you are using VS Code, once in the root project directory,
+        enter 'code .' to open the project in VS Code, otherwise open it
+        manually within your IDE
+      </li>
+    </ul>
+    <h3>Any CLI can be intimidating at first, but there is always help</h3>
+    <li>Run 'ng help' to show a list of commands and help with the CLI</li>
+    <li>
+      You can add '--help' after any command to see a description of the
+      command, for example 'ng generate --help' will show useful information
+      about the generate command
+    </li>
+    <h3>Most useful commands</h3>
+    <li>
+      'ng serve' will run your project locally and allow you to view on
+      localhost:4200 (by default)
+    </li>
+    <li>
+      'ng generate component myComponentName' generates a component where
+      'myComponentName' is the name for your component
+    </li>
+    <ul>
+      <li>This can also be shortened to 'ng g c myComponentName'</li>
+      <li>
+        For generating a component within a folder, or another component, enter
+        the path when naming your component, for example, I want to generate a
+        component 'ChildComponent' within the 'ParentComponent' folder, I'd run
+        'ng g c parent/child'
+      </li>
+    </ul>
+    <li>
+      the CLI automatically adds the word 'Component' to the end of your class
+      name and utilizes pascal case, if I run 'ng g c cat', it will generate a
+      Typescript file with the class named 'CatComponent'
+    </li>
+    <li>
+      Notice the generate command creates a folder with 4 files. These files are
+      your stylesheet (.css/.scss), your Typescript file (.ts), your
+      template/html file (.html), and your unit testing file (.spec.ts) for that
+      specific component
+    </li>
+  </ul>
+</div>
