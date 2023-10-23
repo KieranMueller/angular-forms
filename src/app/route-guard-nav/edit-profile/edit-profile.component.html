@@ -1,0 +1,38 @@
+<app-route-guard-nav></app-route-guard-nav>
+<div class="container">
+  <div class="logic">
+    <h3>What's your favorite food?</h3>
+    <input
+      type="text"
+      [(ngModel)]="food"
+      placeholder="cheeseburger"
+      (keyup)="saved = false"
+    />
+    <button [disabled]="!food" (click)="save()">Save</button>
+  </div>
+  <h3>What's going on here?</h3>
+  <ul>
+    <li>
+      When a route is protected with canDeactivate, we provide logic (resolving
+      to a boolean) that allows a user to navigate away from the current route,
+      or not
+    </li>
+    <li>In this example, we'd like to be able to</li>
+    <ul>
+      <li>Visit the page and leave the page without making changes</li>
+      <li>Visit the page, edit our answer, save, and leave</li>
+      <li>
+        Visit the page, start typing, try to leave before saving, and be
+        notified that we have unsaved changes
+      </li>
+    </ul>
+    <li>To do this, we first set up our component</li>
+    <img src="../../../assets/images/edit-ts.png" alt="code" />
+    <img src="../../../assets/images/edit-html.png" alt="code" />
+    <li>
+      In our app-routing.module.ts we provide the logic for navigating away from
+      the page
+    </li>
+    <img src="../../../assets/images/edit-routing.png" alt="code" />
+  </ul>
+</div>

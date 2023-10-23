@@ -56,7 +56,7 @@
       Attribute Directives
     </button>
     <button [ngClass]="{ highlight: searched.guard }" routerLink="authguard">
-      AuthGuard + CanActivateFn
+      AuthGuard
     </button>
     <button [ngClass]="{ highlight: searched.axios }" routerLink="axios">
       Axios (not Angular)
@@ -124,6 +124,12 @@
       (click)="loading = true"
     >
       Resolve Guard
+    </button>
+    <button
+      [ngClass]="{ highlight: searched.routeGuard }"
+      routerLink="can-activate"
+    >
+      Route Guard
     </button>
     <button [ngClass]="{ highlight: searched.routing }" routerLink="routerlink">
       Routing

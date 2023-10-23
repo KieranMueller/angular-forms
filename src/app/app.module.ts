@@ -90,6 +90,9 @@ import { NoresolveComponent } from './resolve-guard-nav/noresolve/noresolve.comp
 import { CliNavComponent } from './cli-nav/cli-nav.component';
 import { CliComponent } from './cli-nav/cli/cli.component';
 import { CliCommandsComponent } from './cli-nav/cli-commands/cli-commands.component';
+import { RouteGuardNavComponent } from './route-guard-nav/route-guard-nav.component';
+import { MyAccountComponent } from './route-guard-nav/my-account/my-account.component';
+import { EditProfileComponent } from './route-guard-nav/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -172,6 +175,9 @@ import { CliCommandsComponent } from './cli-nav/cli-commands/cli-commands.compon
     CliNavComponent,
     CliComponent,
     CliCommandsComponent,
+    RouteGuardNavComponent,
+    MyAccountComponent,
+    EditProfileComponent,
   ],
   imports: [
     BrowserModule,

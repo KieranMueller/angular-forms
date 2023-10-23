@@ -26,6 +26,7 @@ import { ObservableComponent } from './observables/observable/observable.compone
 import { AuthguardComponent } from './authguardnav/authguard/authguard.component';
 import { SecretComponent } from './authguardnav/secret/secret.component';
 import { authGuard } from './authguardnav/auth.guard';
+import { routeGuard } from './route-guard-nav/my-account/route.guard';
 import { RouterlinkComponent } from './routingnav/routerlink/routerlink.component';
 import { NotfoundComponent } from './routingnav/notfound/notfound.component';
 import { FirstComponent } from './routingnav/first/first.component';
@@ -53,6 +54,8 @@ import { ResolveGuard } from './resolve-guard-nav/resolve/resolve.guard';
 import { NoresolveComponent } from './resolve-guard-nav/noresolve/noresolve.component';
 import { CliComponent } from './cli-nav/cli/cli.component';
 import { CliCommandsComponent } from './cli-nav/cli-commands/cli-commands.component';
+import { MyAccountComponent } from './route-guard-nav/my-account/my-account.component';
+import { EditProfileComponent } from './route-guard-nav/edit-profile/edit-profile.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -247,6 +250,21 @@ const routes: Routes = [
   {
     path: 'commands',
     component: CliCommandsComponent,
+  },
+  {
+    path: 'can-activate',
+    component: MyAccountComponent,
+    canActivate: [routeGuard],
+  },
+  {
+    path: 'edit-profile',
+    component: EditProfileComponent,
+    canDeactivate: [
+      (component: EditProfileComponent) => {
+        if (component.saved) return true;
+        else return confirm('You have unsaved changes, leave anyway?');
+      },
+    ],
   },
   {
     path: '**',
