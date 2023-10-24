@@ -249,6 +249,12 @@ export class HomeComponent implements OnInit {
       'complete',
       'ondestroy',
       'subscription',
+      'memory leak',
+      'leak',
+      'unsubscribe',
+      'oninit',
+      'ngondestroy',
+      'ngoninit',
     ],
     output: [
       'output',

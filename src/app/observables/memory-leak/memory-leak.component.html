@@ -1,0 +1,53 @@
+<app-observables></app-observables>
+<div class="container">
+  <div class="logic">
+    <p>Memory Leak!</p>
+    <button (click)="stopTheMadness()">Unsubscribe</button>
+  </div>
+  <ul>
+    <li>
+      <h3>
+        Open the developer console by either right clicking the page and
+        selecting 'inspect', or use the shortcut ctrl + shift + i
+      </h3>
+    </li>
+    <li>
+      <h4>Navigate to the 'console' tab at the top</h4>
+    </li>
+    <li>
+      Notice this count that increments every second? This is an observable we
+      have subscribed to (making use of rxjs's interval function)
+    </li>
+    <img src="../../../assets/images/memoryleak.png" alt="code" />
+    <li>
+      In our code, we don't unsubscribe to this observable when this component
+      is destroyed, leading to a memory leak
+    </li>
+    <li>
+      To see this, simply navigate away from this page, and watch as the count
+      continues
+    </li>
+    <li>
+      When you return to the page, you'll notice we subscribe once again,
+      starting a new count while the existing count continues to run
+    </li>
+    <li>
+      Clearly, in a large application, this can lead to significant performance
+      issues and unnecessary memory usage
+    </li>
+    <li>When we click the button to unsubscribe, we fire this method</li>
+    <img src="../../../assets/images/memoryleak1.png" alt="code" />
+    <li>
+      This unsubscribes to the current observable, but any that began before
+      navigating away from the page and returning, are not able to stop
+    </li>
+    <li>
+      This is why it is important to unsubscribe from any observables that may
+      not complete in the ngOnDestroy method, ensuring they are unsubscribed
+      from when navigating away from the component
+    </li>
+    <li>Below is the code used in this example</li>
+    <img src="../../../assets/images/memoryleak-ts.png" alt="code" />
+    <img src="../../../assets/images/memroyleak-html.png" alt="code" />
+  </ul>
+</div>

@@ -93,6 +93,7 @@ import { CliCommandsComponent } from './cli-nav/cli-commands/cli-commands.compon
 import { RouteGuardNavComponent } from './route-guard-nav/route-guard-nav.component';
 import { MyAccountComponent } from './route-guard-nav/my-account/my-account.component';
 import { EditProfileComponent } from './route-guard-nav/edit-profile/edit-profile.component';
+import { MemoryLeakComponent } from './observables/memory-leak/memory-leak.component';
 
 @NgModule({
   declarations: [
@@ -178,6 +179,7 @@ import { EditProfileComponent } from './route-guard-nav/edit-profile/edit-profil
     RouteGuardNavComponent,
     MyAccountComponent,
     EditProfileComponent,
+    MemoryLeakComponent,
   ],
   imports: [
     BrowserModule,
