@@ -1,5 +1,5 @@
+<app-output-nav></app-output-nav>
 <div class="container">
-  <button class="home-btn" routerLink="">back to home</button>
   <app-output-parent></app-output-parent>
   <h3>in this example</h3>
   <ul>
@@ -36,6 +36,20 @@
       now, we must receive the event in the parent template, and call our <br />
       'receiveEvent()' function, passing the value emitted from the child as
       '$event'
+    </li>
+  </ul>
+  <h3>Important Note</h3>
+  <ul>
+    <li>
+      Feel free to use output and event emitters when dealing with parent/child
+      components
+    </li>
+    <li>
+      With communication between unrelated components however, opt for setting
+      up a <br />
+      shared service with an rxjs Subject() or BehaviorSubject() to call the
+      next method on, <br />
+      and subscribe in the component displaying the value
     </li>
   </ul>
   <p *ngIf="showParentHtml && showParentTs && showChildHtml && showChildTs">

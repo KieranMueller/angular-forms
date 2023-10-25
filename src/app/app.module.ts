@@ -94,6 +94,11 @@ import { RouteGuardNavComponent } from './route-guard-nav/route-guard-nav.compon
 import { MyAccountComponent } from './route-guard-nav/my-account/my-account.component';
 import { EditProfileComponent } from './route-guard-nav/edit-profile/edit-profile.component';
 import { MemoryLeakComponent } from './observables/memory-leak/memory-leak.component';
+import { OutputNavComponent } from './output/output-nav/output-nav.component';
+import { AxiosNavComponent } from './axios/axios-nav/axios-nav.component';
+import { BehaviorSubjectNavComponent } from './behavior-subject/behavior-subject-nav/behavior-subject-nav.component';
+import { InputNavComponent } from './input/input-nav/input-nav.component';
+import { InputMaskNavComponent } from './input-mask/input-mask-nav/input-mask-nav.component';
 
 @NgModule({
   declarations: [
@@ -180,6 +185,11 @@ import { MemoryLeakComponent } from './observables/memory-leak/memory-leak.compo
     MyAccountComponent,
     EditProfileComponent,
     MemoryLeakComponent,
+    OutputNavComponent,
+    AxiosNavComponent,
+    BehaviorSubjectNavComponent,
+    InputNavComponent,
+    InputMaskNavComponent,
   ],
   imports: [
     BrowserModule,
