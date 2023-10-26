@@ -57,6 +57,7 @@ import { CliCommandsComponent } from './cli-nav/cli-commands/cli-commands.compon
 import { MyAccountComponent } from './route-guard-nav/my-account/my-account.component';
 import { EditProfileComponent } from './route-guard-nav/edit-profile/edit-profile.component';
 import { MemoryLeakComponent } from './observables/memory-leak/memory-leak.component';
+import { ScssComponent } from './scss/scss.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -270,6 +271,10 @@ const routes: Routes = [
   {
     path: 'memory-leak',
     component: MemoryLeakComponent,
+  },
+  {
+    path: 'scss',
+    component: ScssComponent,
   },
   {
     path: '**',

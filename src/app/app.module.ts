@@ -99,6 +99,8 @@ import { AxiosNavComponent } from './axios/axios-nav/axios-nav.component';
 import { BehaviorSubjectNavComponent } from './behavior-subject/behavior-subject-nav/behavior-subject-nav.component';
 import { InputNavComponent } from './input/input-nav/input-nav.component';
 import { InputMaskNavComponent } from './input-mask/input-mask-nav/input-mask-nav.component';
+import { ScssComponent } from './scss/scss.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   declarations: [
@@ -190,6 +192,8 @@ import { InputMaskNavComponent } from './input-mask/input-mask-nav/input-mask-na
     BehaviorSubjectNavComponent,
     InputNavComponent,
     InputMaskNavComponent,
+    ScssComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,81 @@
+<app-nav [sections]="sections"></app-nav>
+<div class="container" [ngClass]="{ scroll: scroll }">
+  <div class="inner">
+    <h1>Sample Header</h1>
+    <ul>
+      <h3>Groceries</h3>
+      <li>Banana</li>
+      <li>Cookies</li>
+    </ul>
+    <button (click)="scroll = !scroll">Toggle Scroll</button>
+  </div>
+</div>
+<div class="container1">
+  <p>(Toggle scroll for easy viewing with code near the bottom of the page)</p>
+  <h3>What is SCSS?</h3>
+  <ul>
+    <li>SCSS stands for 'Sassy Cascading Stylesheets'</li>
+    <li>
+      It's a mixture of Sass (syntactically awesome stylesheet) and CSS
+      (cascading stylesheets)
+    </li>
+    <li>
+      You may have noticed these styling options when generating a new Angular
+      project with the Angular CLI
+    </li>
+    <li>
+      As a CSS pre-processor, SCSS is an extension to CSS, containing the
+      benefits of Sass, while allowing plain ol' CSS as well, making it an
+      excellent stepping stone away from CSS
+    </li>
+    <li>SCSS supports nesting, variables, and much more</li>
+  </ul>
+  <h3>How do I incorporate SCSS into my application?</h3>
+  <ul>
+    <li>
+      If you generate a new Angular project using the CLI and choose SCSS as
+      your styling option, you can use it from the get go without any additional
+      steps
+    </li>
+    <li>
+      If you are working on an existing project that uses CSS, first download
+      the extension 'Live Sass Compiler'
+    </li>
+    <img src="../../assets/images/scss-extension.png" alt="code" />
+    <li>
+      Rename the css file extension you'd like to work with to from .css to
+      .scss
+    </li>
+    <li>
+      You will see an error until you click 'Watch Sass', a button that was just
+      added to the bottom of your VS Code by the 'Live Sass Compiler' extension
+    </li>
+    <img src="../../assets/images/scss-watch.png" alt="code" />
+    <li>
+      While watching, this extension will automatically create a backing css
+      file in your component directory, where any SCSS you write, gets mapped
+      to, as browsers do not support SCSS
+    </li>
+    <img src="../../assets/images/scss-folders.png" alt="code" />
+    <li>
+      At any time, you can jump over and look at the code that is being created
+      for you in the css file, from the SCSS that you are writing
+    </li>
+    <li>
+      Take a look at the grocery list above and checkout the SCSS file compared
+      to the CSS file (that was automatically generate for us)
+    </li>
+    <ul>
+      <li>
+        Take note of the nesting, and two variables defined at the top of the
+        SCSS file
+      </li>
+    </ul>
+    <h3>SCSS</h3>
+    <img src="../../assets/images/scss-scss.png" alt="code" />
+    <h3>CSS</h3>
+    <img src="../../assets/images/scss-css.png" alt="code" />
+    <h3>HTML</h3>
+    <img src="../../assets/images/scss-html.png" alt="code" />
+  </ul>
+</div>
