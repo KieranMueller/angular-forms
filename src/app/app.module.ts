@@ -100,7 +100,9 @@ import { BehaviorSubjectNavComponent } from './behavior-subject/behavior-subject
 import { InputNavComponent } from './input/input-nav/input-nav.component';
 import { InputMaskNavComponent } from './input-mask/input-mask-nav/input-mask-nav.component';
 import { ScssComponent } from './scss/scss.component';
-import { NavComponent } from './nav/nav.component';
+import { SassComponent } from './scss/sass/sass.component';
+import { ScssNavComponent } from './scss/scss-nav/scss-nav.component';
+import { CdkDrag } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -193,7 +195,8 @@ import { NavComponent } from './nav/nav.component';
     InputNavComponent,
     InputMaskNavComponent,
     ScssComponent,
-    NavComponent,
+    SassComponent,
+    ScssNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -211,6 +214,7 @@ import { NavComponent } from './nav/nav.component';
     }),
     BrowserAnimationsModule,
     GraphQLModule,
+    CdkDrag,
   ],
   providers: [],
   bootstrap: [AppComponent],

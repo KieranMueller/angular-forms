@@ -1,0 +1,24 @@
+.container {
+  padding: 30px;
+  width: -moz-max-content;
+  width: max-content;
+  border: 1px solid gray;
+  border-radius: 20px;
+  margin-left: 30px;
+}
+.container ul {
+  font-size: 20px;
+  font-style: italic;
+}
+.container button {
+  background: lightBlue;
+  transition: 0.3s;
+}
+.container button:hover {
+  background: lightcoral;
+}
+
+.desc {
+  margin-left: 30px;
+  max-width: 600px;
+}/*# sourceMappingURL=sass.component.css.map */

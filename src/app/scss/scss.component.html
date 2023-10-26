@@ -1,5 +1,5 @@
-<app-nav [sections]="sections"></app-nav>
-<div class="container" [ngClass]="{ scroll: scroll }">
+<app-scss-nav></app-scss-nav>
+<div class="container" cdkDrag>
   <div class="inner">
     <h1>Sample Header</h1>
     <ul>
@@ -7,11 +7,14 @@
       <li>Banana</li>
       <li>Cookies</li>
     </ul>
-    <button (click)="scroll = !scroll">Toggle Scroll</button>
+    <button>Add Entry</button>
   </div>
 </div>
 <div class="container1">
-  <p>(Toggle scroll for easy viewing with code near the bottom of the page)</p>
+  <h2>
+    (Feel free to drag and reposition the To-Do List, and all code snippets
+    below for easier viewing!)
+  </h2>
   <h3>What is SCSS?</h3>
   <ul>
     <li>SCSS stands for 'Sassy Cascading Stylesheets'</li>
@@ -41,7 +44,7 @@
       If you are working on an existing project that uses CSS, first download
       the extension 'Live Sass Compiler'
     </li>
-    <img src="../../assets/images/scss-extension.png" alt="code" />
+    <img src="../../assets/images/scss-extension.png" alt="code" cdkDrag />
     <li>
       Rename the css file extension you'd like to work with to from .css to
       .scss
@@ -50,13 +53,13 @@
       You will see an error until you click 'Watch Sass', a button that was just
       added to the bottom of your VS Code by the 'Live Sass Compiler' extension
     </li>
-    <img src="../../assets/images/scss-watch.png" alt="code" />
+    <img src="../../assets/images/scss-watch.png" alt="code" cdkDrag />
     <li>
       While watching, this extension will automatically create a backing css
       file in your component directory, where any SCSS you write, gets mapped
       to, as browsers do not support SCSS
     </li>
-    <img src="../../assets/images/scss-folders.png" alt="code" />
+    <img src="../../assets/images/scss-folders.png" alt="code" cdkDrag />
     <li>
       At any time, you can jump over and look at the code that is being created
       for you in the css file, from the SCSS that you are writing
@@ -72,10 +75,10 @@
       </li>
     </ul>
     <h3>SCSS</h3>
-    <img src="../../assets/images/scss-scss.png" alt="code" />
+    <img src="../../assets/images/scss-scss.png" alt="code" cdkDrag />
     <h3>CSS</h3>
-    <img src="../../assets/images/scss-css.png" alt="code" />
+    <img src="../../assets/images/scss-css.png" alt="code" cdkDrag />
     <h3>HTML</h3>
-    <img src="../../assets/images/scss-html.png" alt="code" />
+    <img src="../../assets/images/scss-html.png" alt="code" cdkDrag />
   </ul>
 </div>
