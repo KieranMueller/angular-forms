@@ -1,0 +1,28 @@
+<app-materialsnav></app-materialsnav>
+<div class="container">
+  <div class="drag" cdkDrag>Drag me anywhere!</div>
+  <h3>Drag an html element anywhere on the page</h3>
+  <ul>
+    <li>
+      Add this line in the NgModule where you'd like to use this feature
+      (typically your app.module.ts file)
+    </li>
+    <ul>
+      <li>import {{ "{" }} CdkDrag {{ "}" }} from '@angular/cdk/drag-drop';</li>
+      <img src="../../../assets/images/drag1.png" alt="code" />
+    </ul>
+    <li>Add this line to the imports array</li>
+    <ul>
+      <li>CdkDrag</li>
+      <img src="../../../assets/images/drag2.png" alt="code" />
+    </ul>
+    <li>Add this directive to any element you'd like to drag!</li>
+    <ul>
+      <li>cdkDrag</li>
+      <img src="../../../assets/images/drag3.png" alt="code" />
+    </ul>
+    <li>
+      And you're done! Much easier than writing a ton of javascript yourself
+    </li>
+  </ul>
+</div>

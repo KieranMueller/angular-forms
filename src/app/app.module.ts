@@ -103,6 +103,7 @@ import { ScssComponent } from './scss/scss.component';
 import { SassComponent } from './scss/sass/sass.component';
 import { ScssNavComponent } from './scss/scss-nav/scss-nav.component';
 import { CdkDrag } from '@angular/cdk/drag-drop';
+import { DragAndDropComponent } from './materialsnav/drag-and-drop/drag-and-drop.component';
 
 @NgModule({
   declarations: [
@@ -197,8 +198,10 @@ import { CdkDrag } from '@angular/cdk/drag-drop';
     ScssComponent,
     SassComponent,
     ScssNavComponent,
+    DragAndDropComponent,
   ],
   imports: [
+    CdkDrag,
     BrowserModule,
     MatSlideToggleModule,
     MatAutocompleteModule,
@@ -214,7 +217,6 @@ import { CdkDrag } from '@angular/cdk/drag-drop';
     }),
     BrowserAnimationsModule,
     GraphQLModule,
-    CdkDrag,
   ],
   providers: [],
   bootstrap: [AppComponent],

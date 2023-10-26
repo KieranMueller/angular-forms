@@ -59,6 +59,7 @@ import { EditProfileComponent } from './route-guard-nav/edit-profile/edit-profil
 import { MemoryLeakComponent } from './observables/memory-leak/memory-leak.component';
 import { ScssComponent } from './scss/scss.component';
 import { SassComponent } from './scss/sass/sass.component';
+import { DragAndDropComponent } from './materialsnav/drag-and-drop/drag-and-drop.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -280,6 +281,10 @@ const routes: Routes = [
   {
     path: 'sass',
     component: SassComponent,
+  },
+  {
+    path: 'draganddrop',
+    component: DragAndDropComponent,
   },
   {
     path: '**',
