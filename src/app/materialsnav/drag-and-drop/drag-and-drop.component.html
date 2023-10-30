@@ -25,4 +25,25 @@
       And you're done! Much easier than writing a ton of javascript yourself
     </li>
   </ul>
+  <hr />
+  <div class="show-container" cdkDropList (cdkDropListDropped)="drop($event)">
+    <div *ngFor="let show of shows" cdkDrag>{{ show }}</div>
+  </div>
+  <button (click)="test()">click</button>
+  <h3>Reordering Lists</h3>
+  <ul>
+    <li>First, import CdkDropList and CdkDrag in your NgModule</li>
+    <img src="../../../assets/images/droplist1.png" alt="code" />
+    <li>Add these to the imports array</li>
+    <img src="../../../assets/images/droplist2.png" alt="code" />
+    <li>In your component.ts file, import CdkDragDrop and moveItemInArray</li>
+    <img src="../../../assets/images/droplist3.png" alt="code" />
+    <li>
+      Create your list and add the necessary directives to the HTML elements
+    </li>
+    <li>Refer to the code below</li>
+    <img src="../../../assets/images/droplist4.png" alt="code" />
+    <img src="../../../assets/images/droplist5.png" alt="code" />
+    <img src="../../../assets/images/droplist6.png" alt="code" />
+  </ul>
 </div>

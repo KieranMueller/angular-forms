@@ -68,6 +68,7 @@ export class HomeComponent implements OnInit {
       'suggestion',
       'auto',
       'autocomplete',
+      'draganddrop',
     ],
     apollo: [
       'apollo',

@@ -102,7 +102,7 @@ import { InputMaskNavComponent } from './input-mask/input-mask-nav/input-mask-na
 import { ScssComponent } from './scss/scss.component';
 import { SassComponent } from './scss/sass/sass.component';
 import { ScssNavComponent } from './scss/scss-nav/scss-nav.component';
-import { CdkDrag } from '@angular/cdk/drag-drop';
+import { CdkDrag, CdkDropList } from '@angular/cdk/drag-drop';
 import { DragAndDropComponent } from './materialsnav/drag-and-drop/drag-and-drop.component';
 
 @NgModule({
@@ -202,6 +202,7 @@ import { DragAndDropComponent } from './materialsnav/drag-and-drop/drag-and-drop
   ],
   imports: [
     CdkDrag,
+    CdkDropList,
     BrowserModule,
     MatSlideToggleModule,
     MatAutocompleteModule,
