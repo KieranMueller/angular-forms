@@ -1,0 +1,25 @@
+button {
+  width: 50px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+img {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container {
+  margin-left: 30px;
+}
+
+.box {
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 30px;
+  width: max-content;
+}
+
+.desc {
+  max-width: 600px;
+}

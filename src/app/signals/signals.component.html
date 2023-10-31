@@ -1,0 +1,40 @@
+<app-signals-nav></app-signals-nav>
+<div class="container">
+  <div class="box">
+    <p>My magic number is {{ num() }}</p>
+    <div class="btns">
+      <button (click)="decrement()">-</button>
+      <button (click)="increment()">+</button>
+    </div>
+    <button (click)="reset()">Reset</button>
+  </div>
+  <div class="desc">
+    <h3>What are signals?</h3>
+    <ul>
+      <li>
+        Taken straight from the Angular docs: A signal is a wrapper around a
+        value that can notify interested consumers when that value changes.
+        Signals can contain any value, from simple primitives to complex data
+        structures.
+      </li>
+      <li>
+        Notice that signal values are read from a getter function created behind
+        the scenes
+      </li>
+      <ul>
+        <li>
+          This is why we are interpolating our variable as num() with
+          parenthenses in the template, it is returning the result of the getter
+          function
+        </li>
+      </ul>
+      <li>We can use the set method to change the value</li>
+      <li>
+        We can use the update method to update the value based on its previous
+        value
+      </li>
+      <img src="../../assets/images/signals-ts.png" alt="code" />
+      <img src="../../assets/images/signals-html.png" alt="code" />
+    </ul>
+  </div>
+</div>

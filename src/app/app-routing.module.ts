@@ -60,6 +60,8 @@ import { MemoryLeakComponent } from './observables/memory-leak/memory-leak.compo
 import { ScssComponent } from './scss/scss.component';
 import { SassComponent } from './scss/sass/sass.component';
 import { DragAndDropComponent } from './materialsnav/drag-and-drop/drag-and-drop.component';
+import { BadgeComponent } from './materialsnav/badge/badge.component';
+import { SignalsComponent } from './signals/signals.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -285,6 +287,14 @@ const routes: Routes = [
   {
     path: 'draganddrop',
     component: DragAndDropComponent,
+  },
+  {
+    path: 'badge',
+    component: BadgeComponent,
+  },
+  {
+    path: 'signals',
+    component: SignalsComponent,
   },
   {
     path: '**',

@@ -104,6 +104,12 @@ import { SassComponent } from './scss/sass/sass.component';
 import { ScssNavComponent } from './scss/scss-nav/scss-nav.component';
 import { CdkDrag, CdkDropList } from '@angular/cdk/drag-drop';
 import { DragAndDropComponent } from './materialsnav/drag-and-drop/drag-and-drop.component';
+import { BadgeComponent } from './materialsnav/badge/badge.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
+import { SignalsComponent } from './signals/signals.component';
+import { SignalsNavComponent } from './signals/signals-nav/signals-nav.component';
 
 @NgModule({
   declarations: [
@@ -199,6 +205,9 @@ import { DragAndDropComponent } from './materialsnav/drag-and-drop/drag-and-drop
     SassComponent,
     ScssNavComponent,
     DragAndDropComponent,
+    BadgeComponent,
+    SignalsComponent,
+    SignalsNavComponent,
   ],
   imports: [
     CdkDrag,
@@ -218,6 +227,9 @@ import { DragAndDropComponent } from './materialsnav/drag-and-drop/drag-and-drop
     }),
     BrowserAnimationsModule,
     GraphQLModule,
+    MatBadgeModule,
+    MatButtonModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

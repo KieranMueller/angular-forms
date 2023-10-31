@@ -1,0 +1,42 @@
+<app-materialsnav></app-materialsnav>
+<div class="container">
+  <div class="one" [matBadge]="magicNum" matBadgeOverlap="false">badge!</div>
+  <div
+    class="one"
+    [matBadge]="magicNum"
+    matBadgeOverlap="false"
+    matBadgeSize="large"
+  >
+    big badge!
+  </div>
+  <button
+    mat-raised-button
+    color="primary"
+    [matBadge]="magicNum"
+    [matBadgeHidden]="hide"
+    (click)="hide = !hide"
+    matBadgePosition="before"
+    matBadgeColor="accent"
+  >
+    Toggle
+  </button>
+  <div class="btns">
+    <button (click)="magicNum = magicNum - 1">-</button>
+    <button (click)="magicNum = magicNum + 1">+</button>
+  </div>
+</div>
+<div class="box">
+  <h3>Steps</h3>
+  <ul>
+    <li>
+      In your NgModule, import MatBadgeModule (we are using MatButtonModule here
+      as well)
+    </li>
+    <img src="../../../assets/images/badge1.png" alt="code" />
+    <li>Add to the imports array</li>
+    <img src="../../../assets/images/badge2.png" alt="code" />
+    <li>And include the necessary directives in your template!</li>
+    <li>(magicNum is defined in the .ts file)</li>
+    <img src="../../../assets/images/badge3.png" alt="code" />
+  </ul>
+</div>
