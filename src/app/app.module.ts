@@ -13,9 +13,7 @@ import { InputMaskComponent } from './input-mask/input-mask.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { ObservablesComponent } from './observables/observables.component';
 import { SubscribeComponent } from './observables/subscribe/subscribe.component';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
-import { SecurityContext } from '@angular/core';
-import { MarkdownModule } from 'ngx-markdown';
+import { HttpClientModule } from '@angular/common/http';
 import { PipesComponent } from './pipes/pipes.component';
 import { AsyncComponent } from './pipes/async/async.component';
 import { DatePipeComponent } from './pipes/date-pipe/date-pipe.component';
@@ -227,10 +225,6 @@ import { CypressComponent } from './cypress-nav/cypress/cypress.component';
     ReactiveFormsModule,
     NgxMaskModule.forRoot(),
     HttpClientModule,
-    MarkdownModule.forRoot({
-      loader: HttpClient,
-      sanitize: SecurityContext.NONE,
-    }),
     BrowserAnimationsModule,
     GraphQLModule,
     MatBadgeModule,
