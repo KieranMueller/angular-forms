@@ -156,6 +156,15 @@
       View Child
     </button>
     <button class="inactive">Components + Services</button>
+    <button class="inactive" routerLink="cypress">Cypress (E2E)</button>
+    <button
+      class="inactive"
+      disabled
+      [ngClass]="{ highlight: searched.idleTimeout }"
+      routerLink="idle-timeout"
+    >
+      Idle Timeout
+    </button>
     <button class="inactive">Search Filter</button>
     <button class="inactive" routerLink="basic-unit-test" disabled>
       Unit Testing

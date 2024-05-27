@@ -110,6 +110,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { SignalsComponent } from './signals/signals.component';
 import { SignalsNavComponent } from './signals/signals-nav/signals-nav.component';
+import { IdleTimeoutNavComponent } from './idle-timeout-nav/idle-timeout-nav.component';
+import { CypressNavComponent } from './cypress-nav/cypress-nav.component';
+import { CypressComponent } from './cypress-nav/cypress/cypress.component';
 
 @NgModule({
   declarations: [
@@ -208,6 +211,9 @@ import { SignalsNavComponent } from './signals/signals-nav/signals-nav.component
     BadgeComponent,
     SignalsComponent,
     SignalsNavComponent,
+    IdleTimeoutNavComponent,
+    CypressNavComponent,
+    CypressComponent,
   ],
   imports: [
     CdkDrag,

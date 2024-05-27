@@ -62,6 +62,9 @@ import { SassComponent } from './scss/sass/sass.component';
 import { DragAndDropComponent } from './materialsnav/drag-and-drop/drag-and-drop.component';
 import { BadgeComponent } from './materialsnav/badge/badge.component';
 import { SignalsComponent } from './signals/signals.component';
+import { IdleTimeoutNavComponent } from './idle-timeout-nav/idle-timeout-nav.component';
+import { IdleDashComponent } from './idle-timeout-nav/idle-dash/idle-dash.component';
+import { CypressComponent } from './cypress-nav/cypress/cypress.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -295,6 +298,18 @@ const routes: Routes = [
   {
     path: 'signals',
     component: SignalsComponent,
+  },
+  {
+    path: 'idle-timeout',
+    component: IdleTimeoutNavComponent,
+  },
+  {
+    path: 'idle-dash',
+    component: IdleDashComponent,
+  },
+  {
+    path: 'cypress',
+    component: CypressComponent,
   },
   {
     path: '**',
