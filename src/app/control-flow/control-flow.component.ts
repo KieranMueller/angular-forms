@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { ControlFlowNavComponent } from './control-flow-nav/control-flow-nav.component'
-import { CommonModule } from '@angular/common'
+import { ControlFlowNavComponent } from './control-flow-nav/control-flow-nav.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   standalone: true,

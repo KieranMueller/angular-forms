@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  margin-right: 20px;
 }
 
 .troubleshoot {
@@ -19,16 +20,26 @@
   border-radius: 8px;
 }
 
-.if-box {
+.content-box {
   border: 1px solid white;
   width: fit-content;
   border-radius: 14px;
   padding: 20px 10px;
   margin-top: 20px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
 }
 
 img {
   margin: 14px 0;
   display: block;
-  width: 100%;
+  width: 80%;
+}
+
+.small {
+  width: 60%;
+}
+
+.smaller {
+  width: 40%;
 }
