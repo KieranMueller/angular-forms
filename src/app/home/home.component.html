@@ -74,6 +74,13 @@
       Content Projection
     </button>
     <button
+      [ngClass]="{ highlight: searched.controlFlow }"
+      class="new"
+      routerLink="control-flow"
+    >
+      Control Flow
+    </button>
+    <button
       [ngClass]="{ highlight: searched.dependencyInjection }"
       routerLink="constructor-injection"
     >

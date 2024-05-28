@@ -65,6 +65,7 @@ import { SignalsComponent } from './signals/signals.component';
 import { IdleTimeoutNavComponent } from './idle-timeout-nav/idle-timeout-nav.component';
 import { IdleDashComponent } from './idle-timeout-nav/idle-dash/idle-dash.component';
 import { CypressComponent } from './cypress-nav/cypress/cypress.component';
+import { ControlFlowComponent } from './control-flow/control-flow.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -310,6 +311,10 @@ const routes: Routes = [
   {
     path: 'cypress',
     component: CypressComponent,
+  },
+  {
+    path: 'control-flow',
+    component: ControlFlowComponent,
   },
   {
     path: '**',

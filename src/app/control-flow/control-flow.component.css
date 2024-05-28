@@ -1,0 +1,29 @@
+.box {
+  margin-left: 30px;
+}
+
+.troubleshoot {
+  background-color: rgb(62, 59, 0);
+  width: fit-content;
+  padding: 1px 10px;
+}
+
+.purple {
+  background-color: rgb(113, 77, 245);
+  width: fit-content;
+  padding: 14px 16px;
+  border-radius: 8px;
+}
+
+.if-box {
+  border: 1px solid white;
+  width: fit-content;
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+img {
+  margin: 14px 0;
+  display: block;
+}

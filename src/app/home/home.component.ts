@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   search = '';
   searched: any = {
     cli: false,
+    controlFlow: false,
     material: false,
     apollo: false,
     attDirectives: false,
@@ -41,6 +42,29 @@ export class HomeComponent implements OnInit {
     resolve: false,
   };
   tags: any = {
+    controlFlow: [
+      'new',
+      'control flow',
+      'flow',
+      'statements',
+      '17',
+      '18',
+      'feature',
+      'if',
+      'else',
+      'ngif',
+      'ngelse',
+      'for',
+      'loop',
+      'html',
+      'conditional',
+      'syntax',
+      'switch',
+      'case',
+      'ngfor',
+      '@if',
+      '@else',
+    ],
     cli: [
       'cli',
       'cmd',
