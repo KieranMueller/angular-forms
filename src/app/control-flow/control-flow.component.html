@@ -6,7 +6,7 @@
       Introduced as a developer preview in Angular 17, and now stable in 18,
       control flow statements <br />
       enhance readability and eliminate the need for *ngif, *ngfor and other
-      structural directives. These new statements are built in, no need to
+      structural directives. These new <br> statements are built in, no need to
       import. On this page, we will cover
       <ul>
         <li>{{ "@" }}if, {{ "@" }}else if, {{ "@" }}else</li>
@@ -17,10 +17,10 @@
     <div class="troubleshoot">
       <p>
         If you are implementing control flow statements in a project yourself,
-        and notice an error: (Unexpected character "EOF" error in template)
+        and notice an error: <br>(Unexpected character "EOF" error in template)
       </p>
       <ul>
-        <li>ctrl shift p, restart angular language server</li>
+        <li>ctrl shift p (vscode), restart angular language server</li>
       </ul>
       <p>
         Angular 17 users may need to add this line to their tsconfig.json file
@@ -45,7 +45,7 @@
     <h4>
       Note that the conditional can also be the return value of a function
     </h4>
-    <img src="../../assets/images/control-flow/@if1.png" alt="code" />
+    <!-- <img src="../../assets/images/control-flow/@if1.png" alt="code" /> -->
     <h4>There is also support for {{ "@" }}else if statements</h4>
     <hr />
     <h2>The old way</h2>
@@ -54,9 +54,9 @@
       <p *ngIf="!happy">I am upset...</p>
       <button (click)="happy = !happy">toggle happy boolean</button>
     </div>
-    <img src="../../assets/images/control-flow/@if-old.png" alt="code" />
+    <!-- <img src="../../assets/images/control-flow/@if-old.png" alt="code" /> -->
     <p>(yes, you could implement it this way as well)</p>
-    <img src="../../assets/images/control-flow/@if-old1.png" alt="code" />
+    <!-- <img src="../../assets/images/control-flow/@if-old1.png" alt="code" /> -->
     <h4>
       But, as we can see, the new control flow syntax is much more readable,
       especially for javascript developers!
