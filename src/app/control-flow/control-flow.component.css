@@ -33,13 +33,47 @@
 img {
   margin: 14px 0;
   display: block;
-  width: 80%;
+  width: 95%;
 }
 
 .small {
-  width: 60%;
+  width: 65%;
 }
 
 .smaller {
-  width: 40%;
+  width: 50%;
+}
+
+.title {
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-box1 {
+
+}
+
+.donkey-box {
+}
+
+.row p {
+  border: 1px solid white;
+  padding: 8px;
+  border-radius: 8px;
+  margin: 3px;
+  text-align: center;
+  transition: 0.2s;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 0, 255, 0.214);
+  }
+}
+
+.donkey-btn {
+  display: block;
+  margin: 10px auto;
 }

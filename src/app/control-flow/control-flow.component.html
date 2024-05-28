@@ -46,7 +46,11 @@
     <h4>
       Note that the conditional can also be the return value of a function
     </h4>
-    <img class="smaller" src="../../assets/images/control-flow/@if1.png" alt="code" />
+    <img
+      class="smaller"
+      src="../../assets/images/control-flow/@if1.png"
+      alt="code"
+    />
     <h4>There is also support for {{ "@" }}else if statements</h4>
     <hr />
     <h2>The old way</h2>
@@ -57,11 +61,76 @@
     </div>
     <img src="../../assets/images/control-flow/@if-old.png" alt="code" />
     <p>(yes, you could implement it this way as well)</p>
-    <img class="small" src="../../assets/images/control-flow/@if-old1.png" alt="code" />
+    <img
+      class="small"
+      src="../../assets/images/control-flow/@if-old1.png"
+      alt="code"
+    />
     <h4>
       But, as we can see, the new control flow syntax is much more readable,
       especially for javascript developers!
     </h4>
   </div>
-  <!-- <div class="content-box"></div> -->
+  <div class="content-box content-box1">
+    <h2>New {{ "@" }}for loop</h2>
+    <div class="purple donkey-box">
+      <h3 class="title">Donkeys</h3>
+      @for (donkey of donkeys; track donkey; let i = $index) {
+      <div class="row">
+        <p>id: {{ i }}</p>
+        <p>Name: {{ donkey.name }}</p>
+        <p>Color: {{ donkey.color }}</p>
+        <p>Age: {{ donkey.age }}</p>
+      </div>
+      } @empty {
+      <p>No Donkeys!</p>
+      }
+      <button class="donkey-btn" (click)="randomizeDonkeys()">Randomize</button>
+      <button class="donkey-btn" (click)="removeAllDonkeys()">
+        {{ donkeys.length > 0 ? "Remove All" : "Add em back" }}
+      </button>
+    </div>
+    <img src="../../assets/images/control-flow/@for2.png" alt="code" />
+    <img src="../../assets/images/control-flow/@for1.png" alt="code" />
+    <ul>
+      <li>
+        Notice that "track" is now required, improving performance, if you'd
+        like to learn more in depth, visit
+        <a
+          href="https://blog.angular-university.io/angular-for/"
+          target="_blank"
+          >this</a
+        >
+        link
+      </li>
+      <li>We now have the {{ "@" }}empty block for an empty list</li>
+      <li>This {{ "@" }}for loop can iterate over characters in a string</li>
+      <li>The syntax for $index has been updated</li>
+      <li>
+        There is support for $first and $last, returning a boolean if the
+        current element is first or last
+      </li>
+      <li>
+        There is also support for $count, which holds the length of the array,
+        in this case: 3
+      </li>
+    </ul>
+    <hr />
+    <h2>The old way</h2>
+    <div class="purple donkey-box">
+      <h3 class="title">Donkeys</h3>
+      <div class="row" *ngFor="let donkey of donkeys; let i = index">
+        <p>id: {{ i }}</p>
+        <p>Name: {{ donkey.name }}</p>
+        <p>Color: {{ donkey.color }}</p>
+        <p>Age: {{ donkey.age }}</p>
+      </div>
+      <p *ngIf="donkeys.length === 0">No Donkeys!</p>
+      <button class="donkey-btn" (click)="randomizeDonkeys()">Randomize</button>
+      <button class="donkey-btn" (click)="removeAllDonkeys()">
+        {{ donkeys.length > 0 ? "Remove All" : "Add em back" }}
+      </button>
+    </div>
+    <img src="../../assets/images/control-flow/@for3.png" alt="code" />
+  </div>
 </div>
